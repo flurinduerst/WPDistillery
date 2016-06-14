@@ -1,0 +1,71 @@
+# SETTINGS
+##############################################################
+
+locale: de_CH
+
+settings:
+  url: scwpsetup.dev
+  title: Scotch WP Setup
+  rewrite_structure: /%postname%/
+
+admin:
+  user: admin
+  password: admin
+  email: admin@mail.com
+
+db:
+  name: scotchbox
+  user: root
+  pass: root
+  prefix: wp_
+
+# THEME
+##############################################################
+
+theme:
+  name: WPSeed
+  url: https://github.com/flurinduerst/WPSeed/archive/master.zip
+
+# PLUGINS
+##############################################################
+
+plugins_active:
+  - disable-comments
+  - duplicate-post
+  - enable-media-replace
+  - favicon-by-realfavicongenerator
+  - regenerate-thumbnails
+  - simple-page-ordering
+  - user-switching
+
+plugins_inactive:
+  #dev
+  - regenerate-thumbnails
+  - custom-post-type-ui
+  - search-and-replace
+  - capability-manager-enhanced
+  - user-switching
+  - favicon-by-realfavicongenerator
+  - disable-comments
+  #administration
+  - adminimize
+  - admin-menu-editor
+  - admin-menu-reorder
+  - enable-media-replace
+  - duplicate-post
+  - simple-page-ordering
+  - wordpress-seo
+  #security/backup
+  - wp-security-audit-log
+  - backwpup
+
+# SETUP OPTIONS
+##############################################################
+# if you don't want the setup to run all tasks, you can
+# set them to false
+
+installation:
+  wp: false
+  theme: false
+  cleanup: true
+  plugins: true
