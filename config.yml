@@ -3,16 +3,19 @@
 
 locale: de_CH
 
+# WordPress settings
 settings:
   url: scwpsetup.dev
   title: Scotch WP Setup
   rewrite_structure: /%postname%/
 
+# admin user settings
 admin:
   user: admin
   password: admin
   email: admin@mail.com
 
+# scotch box db access
 db:
   name: scotchbox
   user: root
@@ -22,6 +25,7 @@ db:
 # THEME
 ##############################################################
 
+# theme to install
 theme:
   name: WPSeed
   url: https://github.com/flurinduerst/WPSeed/archive/master.zip
@@ -29,6 +33,7 @@ theme:
 # PLUGINS
 ##############################################################
 
+# plugins to install & activate
 plugins_active:
   - disable-comments
   - duplicate-post
@@ -38,8 +43,9 @@ plugins_active:
   - simple-page-ordering
   - user-switching
 
+# plugins to install
 plugins_inactive:
-  #dev
+  #development
   - regenerate-thumbnails
   - custom-post-type-ui
   - search-and-replace
