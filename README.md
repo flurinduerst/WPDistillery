@@ -1,5 +1,5 @@
 # WordPress Setup for Scotch Box
-Version: 1.3.1
+***Version:*** 1.3.1
 
 ![Screenshot](http://flurinduerst.ch/web/ScWPSetup/scotch_plus_wp.png)
 
@@ -18,7 +18,7 @@ See this [Screenshot](http://flurinduerst.ch/web/ScWPSetup/setup_screenshot.png)
 
 #### Requirements
 - ssh access to your VM/host
-- [wp cli](https://wp-cli.org/) 0.23+
+- [wp cli](https://wp-cli.org/) 0.23+ on your VM/host
 
 ScWPSetup is made to work with [Scotch Box](https://box.scotch.io/). Since `ScWPSetup Version 1.3.1+` you can edit the WordPress root folder so you should be able to run with any other vagrantbox or webhost (see [ScWPSetup when not using Sotch Box](https://github.com/flurinduerst/ScWPSetup#setup-when-not-using-scotch-box)).
 
@@ -42,9 +42,9 @@ To setup a new project running Scotch Box and WordPress simply follow these step
 
 
 ##### About
-Author: Flurin Dürst
-Contact: [flurin@flurinduerst.ch](mailto:flurin@flurinduerst.ch)
-Twitter: [@flurinduerst](https://twitter.com/flurinduerst)
+* Author: Flurin Dürst
+* Contact: [flurin@flurinduerst.ch](mailto:flurin@flurinduerst.ch)
+* Twitter: [@flurinduerst](https://twitter.com/flurinduerst)
 
 ##### Contribution
 Feel free to contact me or add issues/pull-requests.
