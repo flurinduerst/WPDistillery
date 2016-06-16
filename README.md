@@ -1,6 +1,8 @@
 # WordPress Setup for Scotch Box
 Version: 1.3
 
+![Scotch Box + WordPress](http://flurinduerst.ch//web/ScWPSetup/scotch_plus_wp.png)
+
 ### What/How/Why
 ScWPSetup does all the work for you when setting up a new project with [scotchbox](https://box.scotch.io/). After adding your theme, plugins and environment variables into `config.yml` you simply execute `setup.sh` and it will
 - download/install/configure WordPress
