@@ -5,7 +5,7 @@
 # Author: Flurin Dürst » github.com/flurinduerst
 # URL: https://github.com/flurinduerst/ScWPSetup
 #
-# Version: 1.2
+# Version: 1.3
 
 set -e
 
@@ -83,17 +83,26 @@ fi
 # CLEANUP
 if [ $CONF_installation_cleanup = true ]; then
   printf "${BRN}[=== CLEANUP ===]${NC}\n"
-  printf "${BLU}»»» removing default comments, posts, plugins...${NC}\n"
-  # wp comment delete 1 --force
-  # wp post delete 1 --force
-  printf "${BLU}»»» removing WP readme/license files...${NC}\n"
-  rm readme.html
-  rm liesmich.html
-  rm license.txt
-  printf "${BLU}»»» removing default themes...${NC}\n"
-  wp theme delete twentyfourteen
-  wp theme delete twentyfifteen
-  wp theme delete twentysixteen
+  if [ $CONF_installation_cleanup_comment = true ]; then
+    printf "${BLU}»»» removing default comment...${NC}\n"
+    wp comment delete 1 --force
+  fi
+  if [ $CONF_installation_cleanup_posts = true ]; then
+    printf "${BLU}»»» removing default posts...${NC}\n"
+    wp post delete 1 --force
+  fi
+  if [ $CONF_installation_cleanup_files = true ]; then
+    printf "${BLU}»»» removing WP readme/license files...${NC}\n"
+    rm readme.html
+    rm liesmich.html
+    rm license.txt
+  fi
+  if [ $CONF_installation_cleanup_themes = true ]; then
+    printf "${BLU}»»» removing default themes...${NC}\n"
+    wp theme delete twentyfourteen
+    wp theme delete twentyfifteen
+    wp theme delete twentysixteen
+  fi
 else
   printf "${BLU}»»» skipping Cleanup...${NC}\n"
 fi

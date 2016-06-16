@@ -3,7 +3,7 @@
 # Author: Flurin Dürst » github.com/flurinduerst
 # URL: https://github.com/flurinduerst/ScWPSetup
 #
-# Version: 1.2
+# Version: 1.3
 
 
 # SETTINGS
@@ -82,4 +82,8 @@ installation:
   wp: true
   theme: true
   cleanup: true
+    comment: false
+    posts: false
+    files: false
+    themes: true
   plugins: true
