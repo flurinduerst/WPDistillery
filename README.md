@@ -18,6 +18,7 @@ You can use this setup with any other vagrantbox, altough it is written especial
 
 ### Setup
 To setup a new project simply follow these steps:
+
 1. install [scotchbox](https://box.scotch.io/) into project root `git clone https://github.com/scotch-io/scotch-box.git`
 2. install ScWPSetup into project root `git clone git@github.com:flurinduerst/ScWPSetup.git`
 3. edit `config.yml` with whatever you need/want
