@@ -1,5 +1,6 @@
 .DS_STORE
 .vagrant
+_res
 npm-debug.log
 public
 Vagrantfile

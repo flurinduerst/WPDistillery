@@ -5,7 +5,7 @@
 # Author: Flurin Dürst » github.com/flurinduerst
 # URL: https://github.com/flurinduerst/ScWPSetup
 #
-# Version: 1.3
+# Version: 1.3.1
 
 set -e
 
@@ -41,63 +41,74 @@ BLU='\033[0;34m' # task
 BRN='\033[0;33m' # headline
 NC='\033[0m' # No Color
 
-BOLD='\033[0;1m'
-NB='\033[0;22m'
-
 # EXECUTIVE SETUP
 ####################################################################################################
 
-printf "${BRN}========== SETUP START ==========${NC}\n\n"
+printf "${BRN}========== ScWPSETUP START ==========${NC}\n\n"
 
 # READ CONFIG
 eval $(parse_yaml config.yml "CONF_")
-cd public
+
+# check if wpfolder exists, create if not
+if [ ! -d "$CONF_wpfolder" ]; then
+  mkdir $CONF_wpfolder
+  printf "${BLU}»»» creating WP Folder CONF_wpfolder...${NC}\n"
+fi
+
+cd $CONF_wpfolder
 
 # INSTALL WORDPRESS
-if [ $CONF_installation_wp = true ]; then
+if [ $CONF_setup_wp = true ]; then
   printf "${BRN}[=== INSTALL WORDPRESS ===]${NC}\n"
   printf "${BLU}»»» downloading WordPress...${NC}\n"
-  wp core download --locale=$CONF_locale
+  wp core download --locale=$CONF_wplocale
   printf "${BLU}»»» creating wp-config...${NC}\n"
-  wp core config --dbname=$CONF_db_name --dbuser=$CONF_db_user --dbpass=$CONF_db_pass --dbprefix=$CONF_db_prefix --locale=$CONF_locale
+  wp core config --dbname=$CONF_db_name --dbuser=$CONF_db_user --dbpass=$CONF_db_pass --dbprefix=$CONF_db_prefix --locale=$CONF_wplocale
   printf "${BLU}»»» installing wordpress...${NC}\n"
-  wp core install --url=$CONF_settings_url --title="$CONF_settings_title" --admin_user=$CONF_admin_user --admin_password=$CONF_admin_password --admin_email=$CONF_admin_email
+  wp core install --url=$CONF_wpsettings_url --title="$CONF_wpsettings_title" --admin_user=$CONF_admin_user --admin_password=$CONF_admin_password --admin_email=$CONF_admin_email
   printf "${BLU}»»» configure settings...${NC}\n"
-  wp rewrite structure $CONF_settings_rewrite_structure
+  wp rewrite structure $CONF_wpsettings_rewrite_structure
 else
   printf "${BLU}-> skipping WordPress installation...${NC}\n"
 fi
 
 # INSTALL THEME
-if [ $CONF_installation_theme = true ]; then
+if [ $CONF_setup_theme = true ]; then
   printf "${BRN}[=== INSTALL $CONF_theme_name ===]${NC}\n"
   printf "${BLU}»»» downloading $CONF_theme_name...${NC}\n"
   wp theme install $CONF_theme_url
   printf "${BLU}»»» installing/activating $CONF_theme_name...${NC}\n"
-  mv wp-content/themes/$CONF_theme_name-master wp-content/themes/$CONF_theme_name
-  wp theme activate $CONF_theme_name
+  if [ $CONF_theme_rename != "" ]; then
+    # rename theme
+    printf "${BLU}»»» renaming CONF_theme_name to CONF_theme_rename...${NC}\n"
+    mv wp-content/themes/$CONF_theme_name-master wp-content/themes/$CONF_theme_rename
+    wp theme activate $CONF_theme_rename
+  else
+    mv wp-content/themes/$CONF_theme_name-master wp-content/themes/$CONF_theme_name
+    wp theme activate $CONF_theme_name
+  fi
 else
   printf "${BLU}»»» skipping theme installation...${NC}\n"
 fi
 
 # CLEANUP
-if [ $CONF_installation_cleanup = true ]; then
+if [ $CONF_setup_cleanup = true ]; then
   printf "${BRN}[=== CLEANUP ===]${NC}\n"
-  if [ $CONF_installation_cleanup_comment = true ]; then
+  if [ $CONF_setup_cleanup_comment = true ]; then
     printf "${BLU}»»» removing default comment...${NC}\n"
     wp comment delete 1 --force
   fi
-  if [ $CONF_installation_cleanup_posts = true ]; then
+  if [ $CONF_setup_cleanup_posts = true ]; then
     printf "${BLU}»»» removing default posts...${NC}\n"
     wp post delete 1 --force
   fi
-  if [ $CONF_installation_cleanup_files = true ]; then
+  if [ $CONF_setup_cleanup_files = true ]; then
     printf "${BLU}»»» removing WP readme/license files...${NC}\n"
     rm readme.html
     rm liesmich.html
     rm license.txt
   fi
-  if [ $CONF_installation_cleanup_themes = true ]; then
+  if [ $CONF_setup_cleanup_themes = true ]; then
     printf "${BLU}»»» removing default themes...${NC}\n"
     wp theme delete twentyfourteen
     wp theme delete twentyfifteen
@@ -108,7 +119,7 @@ else
 fi
 
 # PLUGINS
-if [ $CONF_installation_plugins = true ]; then
+if [ $CONF_setup_plugins = true ]; then
   printf "${BRN}[=== PLUGINS ===]${NC}\n"
   printf "${BLU}»»» removing WP default plugins${NC}\n"
   wp plugin delete akismet
@@ -132,4 +143,4 @@ fi
 printf "${BLU}»»» checking wp cli version${NC}\n"
 wp cli check-update
 
-printf "${BRN}========== SETUP FINISHED ==========${NC}\n"
+printf "${BRN}========== ScWPSETUP FINISHED ==========${NC}\n"
