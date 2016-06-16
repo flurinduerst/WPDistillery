@@ -17,7 +17,8 @@ You can then re-use your config.yml for every other project and save a lot of ti
 
 ### Setup
 To setup a new project simply follow these steps:
-* in your project-root folder (containing `Vagrantfile` and `public`) run `git clone --depth 1 git@github.com:flurinduerst/ScWPSetup.git && mv ScWPSetup/config.yml config.yml && mv ScWPSetup/setup.sh setup.sh && rm -rf ScWPSetup`
+* in your project-root folder (containing `Vagrantfile` and `public`) run
+`git clone --depth 1 git@github.com:flurinduerst/ScWPSetup.git && mv ScWPSetup/config.yml config.yml && mv ScWPSetup/setup.sh setup.sh && rm -rf ScWPSetup`
 * edit `config.yml` with whatever you need/want
 * `vagrant ssh`
 * update wp cli (`sudo wp cli update --allow-root` and confirm)

@@ -71,7 +71,7 @@ plugins_inactive:
 # set them to false
 
 installation:
-  wp: false
-  theme: false
+  wp: true
+  theme: true
   cleanup: true
   plugins: true
