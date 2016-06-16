@@ -1,14 +1,13 @@
 #!/usr/bin/env bash
+#
+# WP SETUP FILE
+#
+# Author: Flurin Dürst » github.com/flurinduerst
+# URL: https://github.com/flurinduerst/ScWPSetup
+#
+# Version: 1.2
 
 set -e
-
-# INFORMATIONS
-####################################################################################################
-
-
-# WP SETUP FILE
-# Author: flurinduerst
-# URL: https://github.com/flurinduerst/ScWPSetup
 
 # REQUIREMENTS
 ####################################################################################################
