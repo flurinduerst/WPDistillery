@@ -5,7 +5,8 @@
 # Author: Flurin Dürst » github.com/flurinduerst
 # URL: https://github.com/flurinduerst/ScWPSetup
 #
-# Version: 1.3.1
+# ScWPSetup Version 1.4
+# File Version 1.4
 
 set -e
 
@@ -80,7 +81,7 @@ if [ $CONF_setup_theme = true ]; then
   printf "${BLU}»»» installing/activating $CONF_theme_name...${NC}\n"
   if [ $CONF_theme_rename != "" ]; then
     # rename theme
-    printf "${BLU}»»» renaming CONF_theme_name to CONF_theme_rename...${NC}\n"
+    printf "${BLU}»»» renaming $CONF_theme_name to $CONF_theme_rename...${NC}\n"
     mv wp-content/themes/$CONF_theme_name-master wp-content/themes/$CONF_theme_rename
     wp theme activate $CONF_theme_rename
   else

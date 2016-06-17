@@ -3,11 +3,11 @@
 # Author: Flurin Dürst » github.com/flurinduerst
 # URL: https://github.com/flurinduerst/ScWPSetup
 #
-# Version: 1.3.1
-
+# ScWPSetup Version 1.4
+# File Version 1.4
 
 # SETUP SETTINGS
-##############################################################
+#################################################################
 
 # WordPress folder to execute the setup
 wpfolder: public
@@ -27,7 +27,7 @@ db:
   prefix: wp_
 
 # WORDPRESS SETTINGS
-##############################################################
+#################################################################
 
 wpsettings:
   url: wpsetup.dev
@@ -35,16 +35,16 @@ wpsettings:
   rewrite_structure: /%postname%/
 
 # THEME
-##############################################################
+#################################################################
 
-# theme to install choose new name in 'rename'
+# theme to install choose new name in 'rename' or leave empty
 theme:
   name: WPSeed
   rename: ""
   url: https://github.com/flurinduerst/WPSeed/archive/master.zip
 
 # PLUGINS
-##############################################################
+#################################################################
 
 # plugins to install & activate
 plugins_active:
@@ -79,9 +79,8 @@ plugins_inactive:
   - backwpup
 
 # SETUP OPTIONS
-##############################################################
+####################################################################
 # if you don't want the setup to run all tasks set them to false
-
 
 installation:
   wp: true

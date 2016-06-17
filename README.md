@@ -1,5 +1,5 @@
 # WordPress Setup for Scotch Box
-***Version:*** 1.3.1
+***Version:*** 1.4
 
 ![Screenshot](http://flurinduerst.ch/web/ScWPSetup/scotch_plus_wp.png)
 
