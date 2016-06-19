@@ -85,9 +85,9 @@ plugins_inactive:
 installation:
   wp: true
   theme: true
+  plugins: true
   cleanup: true
     comment: true
     posts: false
     files: true
     themes: true
-  plugins: true

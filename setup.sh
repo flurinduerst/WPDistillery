@@ -40,7 +40,7 @@ RED='\033[0;31m' # error
 GRN='\033[0;32m' # success
 BLU='\033[0;34m' # task
 BRN='\033[0;33m' # headline
-NC='\033[0m' # No Color
+NC='\033[0m' # no color
 
 # EXECUTIVE SETUP
 ####################################################################################################
@@ -50,7 +50,7 @@ printf "${BRN}========== ScWPSETUP START ==========${NC}\n\n"
 # READ CONFIG
 eval $(parse_yaml config.yml "CONF_")
 
-# check if wpfolder exists, create if not
+# CHECK WP FOLDER
 if [ ! -d "$CONF_wpfolder" ]; then
   mkdir $CONF_wpfolder
   printf "${BLU}»»» creating WP Folder CONF_wpfolder...${NC}\n"
