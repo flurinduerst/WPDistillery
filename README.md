@@ -40,8 +40,8 @@ git clone https://github.com/scotch-io/scotch-box.git && mv scotch-box/public pu
 #### Setup without using Scotch Box
 1. install your vagrantbox of choice or use your webhost for the following steps
 2. clone WP Distillery into project
-2. add environment variables and your preferred options into `config.yml` (see [FAQ](https://github.com/flurinduerst/WPDistillery/blob/master/README.md) for additional info on config.yml)
-4. `ssh` to your VM/host
+2. add environment variables and your preferred options into `config.yml` (see [configuration file in detail](https://github.com/flurinduerst/WPDistillery#the-configuration-file-in-detail) for additional info on config.yml)
+
 5. execute `setup.sh`
 
 #### Known Issues
