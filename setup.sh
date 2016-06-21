@@ -6,7 +6,7 @@
 # URL: https://github.com/flurinduerst/ScWPSetup
 #
 # ScWPSetup Version 1.4
-# File Version 1.4
+# File Version 1.41
 
 set -e
 
@@ -59,7 +59,7 @@ fi
 cd $CONF_wpfolder
 
 # INSTALL WORDPRESS
-if [ $CONF_setup_wp = true ]; then
+if [ $CONF_installation_wp = true ]; then
   printf "${BRN}[=== INSTALL WORDPRESS ===]${NC}\n"
   printf "${BLU}»»» downloading WordPress...${NC}\n"
   wp core download --locale=$CONF_wplocale
@@ -74,7 +74,7 @@ else
 fi
 
 # INSTALL THEME
-if [ $CONF_setup_theme = true ]; then
+if [ $CONF_installation_theme = true ]; then
   printf "${BRN}[=== INSTALL $CONF_theme_name ===]${NC}\n"
   printf "${BLU}»»» downloading $CONF_theme_name...${NC}\n"
   wp theme install $CONF_theme_url
@@ -93,23 +93,23 @@ else
 fi
 
 # CLEANUP
-if [ $CONF_setup_cleanup = true ]; then
+if [ $CONF_installation_cleanup = true ]; then
   printf "${BRN}[=== CLEANUP ===]${NC}\n"
-  if [ $CONF_setup_cleanup_comment = true ]; then
+  if [ $CONF_installation_cleanup_comment = true ]; then
     printf "${BLU}»»» removing default comment...${NC}\n"
     wp comment delete 1 --force
   fi
-  if [ $CONF_setup_cleanup_posts = true ]; then
+  if [ $CONF_installation_cleanup_posts = true ]; then
     printf "${BLU}»»» removing default posts...${NC}\n"
     wp post delete 1 --force
   fi
-  if [ $CONF_setup_cleanup_files = true ]; then
+  if [ $CONF_installation_cleanup_files = true ]; then
     printf "${BLU}»»» removing WP readme/license files...${NC}\n"
     rm readme.html
     rm liesmich.html
     rm license.txt
   fi
-  if [ $CONF_setup_cleanup_themes = true ]; then
+  if [ $CONF_installation_cleanup_themes = true ]; then
     printf "${BLU}»»» removing default themes...${NC}\n"
     wp theme delete twentyfourteen
     wp theme delete twentyfifteen
@@ -120,7 +120,7 @@ else
 fi
 
 # PLUGINS
-if [ $CONF_setup_plugins = true ]; then
+if [ $CONF_installation_plugins = true ]; then
   printf "${BRN}[=== PLUGINS ===]${NC}\n"
   printf "${BLU}»»» removing WP default plugins${NC}\n"
   wp plugin delete akismet
