@@ -106,7 +106,6 @@ if $CONF_installation_cleanup ; then
   if $CONF_installation_cleanup_files ; then
     printf "${BLU}»»» removing WP readme/license files...${NC}\n"
     rm readme.html
-    rm liesmich.html
     rm license.txt
   fi
   if $CONF_installation_cleanup_themes ; then
