@@ -84,10 +84,10 @@ plugins_inactive:
 
 installation:
   wp: true
-  theme: false
-  plugins: false
+  theme: true
+  plugins: true
   cleanup: true
-    comment: false
-    posts: false
+    comment: true
+    posts: true
     files: true
     themes: true
