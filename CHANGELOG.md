@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.51
+* Bugfixes
+
 ## 1.5
 * Rename to WP Distillery
 * Bugfix / Typo / Documentation

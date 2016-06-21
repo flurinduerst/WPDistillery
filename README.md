@@ -1,6 +1,6 @@
 ![Screenshot](http://flurinduerst.ch/web/wpdistillery/wpdistillery_logo.png)
 
-***Version:*** 1.5
+***Version:*** 1.51
 
 #### What/How/Why
 WP Distillery does all the work for you when setting up a new WordPress project with [Scotch Box](https://box.scotch.io/). Simply add your preferred theme, plugins, options etc. into `config.yml` and your good to go. With WPDistillery it won't take you no longer than 5 minutes until you can start working on your new WordPress project.
