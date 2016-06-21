@@ -1,10 +1,10 @@
-# Configuration for ScWPSetup executed by setup.sh
+# Configuration for WP Distillery executed by setup.sh
 #
 # Author: Flurin Dürst » github.com/flurinduerst
-# URL: https://github.com/flurinduerst/ScWPSetup
+# URL: https://github.com/flurinduerst/WPDistillery
 #
-# ScWPSetup Version 1.4
-# File Version 1.4
+# WP Distillery Version 1.5
+# File Version 1.41
 
 # SETUP SETTINGS
 #################################################################
@@ -30,8 +30,8 @@ db:
 #################################################################
 
 wpsettings:
-  url: wpsetup.dev
-  title: WP Setup
+  url: example.dev
+  title: My Site
   rewrite_structure: /%postname%/
 
 # THEME
@@ -84,10 +84,10 @@ plugins_inactive:
 
 installation:
   wp: true
-  theme: true
-  plugins: true
+  theme: false
+  plugins: false
   cleanup: true
-    comment: true
+    comment: false
     posts: false
     files: true
     themes: true

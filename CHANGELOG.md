@@ -1,7 +1,8 @@
 # CHANGELOG
 
-## Head
-* Typo / Documentation
+## 1.5
+* Rename to WP Distillery
+* Bugfix / Typo / Documentation
 
 ## 1.4 | 17.06.2016
 * Add support for custom WP root folder
