@@ -101,7 +101,7 @@ if $CONF_installation_cleanup ; then
   fi
   if $CONF_installation_cleanup_posts ; then
     printf "${BLU}»»» removing default posts...${NC}\n"
-    wp post delete 1 --force
+    wp post delete 1 2 --force
   fi
   if $CONF_installation_cleanup_files ; then
     printf "${BLU}»»» removing WP readme/license files...${NC}\n"
