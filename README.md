@@ -64,13 +64,13 @@ If you find this tool useful, consider supporting WP Distillery or [buying me a 
 
 
 --------------------------------------------------------------
+--------------------------------------------------------------
 
 
-## The configuration file in detail
+### The configuration file in detail
 
 In this section, we will go through the `config.yml` step by step as I will explain the options available.
 
-### Setup settings
 In ***`wpfolder`*** you define the folder containing WordPress. Within the current version of Scotch Box this is `public` by default.
 With ***`wplocale`*** you can select what language to download and install WordPress. Use language Codes like `en_US` or `en_GB`.
 ***`admin`*** defines the default admin user. Set your preferred username, password and email.
@@ -97,9 +97,10 @@ db:
   prefix: wp_
 ```
 
-### WordPress Settings
+
 In ***`wpsettings`*** you can define WP-Options like the url, title and the rewrite_structure.
 Note: To edit the url you use to access the website within your browser edit `config.vm.hostname` in the Vagrantfile from Scotch Box.
+
 ```yaml
 # WORDPRESS SETTINGS
 #################################################################
@@ -110,7 +111,6 @@ wpsettings:
   rewrite_structure: /%postname%/
 ```
 
-### Theme
 Now you can install a (starter-) theme if you want. Simply add the name and download-url of the theme. WP Distillery will then download, unzip and install the theme. If you do not leave `rename` empty. The it will also rename the installed theme for you.
 ```yaml
 # THEME
@@ -123,7 +123,6 @@ theme:
   url: https://github.com/flurinduerst/WPSeed/archive/master.zip
 ```
 
-### Plugins
 You can select what plugins you want WP Distillery to install for you. Split into two sections you can define which plugins to download and install, and which to also activate. By default this section contains a few recommendations.
 
 ```yaml
@@ -170,7 +169,6 @@ plugins_active:
   - "https://example.com/plugins/awesome_plugin.zip&key=31071988"
 ```
 
-### Setup Options
 Maybe you don't want WP Distillery to install a theme? Or you prefer keeping the default posts and files it comes with? Within the setup options at the bottom of the file you can tell WP Distillery which tasks to perform. Simply set those you wan't to skip to `false`.
 * `wp` (default true): install WordPress core
 * `theme` (default true): install and activate the theme defined above
