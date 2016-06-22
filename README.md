@@ -11,11 +11,12 @@ Executing setup.sh then will
 - install/activate the plugins you defined in the config
 - clean WordPress defaults (contents, plugins, themes, unused files)
 
-***You're able to adjust wich of the above tasks will be executed. Simply set the desired tasks to true/false in the "Setup Options" section at the bottom of  `config.yml`***
+You're able to adjust wich of the above tasks will be executed. Simply set the desired tasks to true/false in the "Setup Options" section at the bottom of  `config.yml`
 
 Now you can use your `config.yml` as a template for every new project and save a lot of time clicking, dragging, editing and configuring.
 
-See this [Screenshot](http://flurinduerst.ch/web/wpdistillery/setup_screenshot.png) for a preview of how the setup will look like.
+Watch [WPDistillery in action](https://youtu.be/sQqeCtFso3o) or see this [Screenshot](http://flurinduerst.ch/web/wpdistillery/setup_screenshot.png) for a preview of how the setup will look like.
+
 
 #### Dependencies
 - ssh access to your VM/host
