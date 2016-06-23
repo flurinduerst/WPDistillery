@@ -3,7 +3,7 @@
 # Author: Flurin Dürst » github.com/flurinduerst
 # URL: https://github.com/flurinduerst/WPDistillery
 #
-# File Version 1.42
+# File Version 1.43
 
 # SETUP SETTINGS
 #################################################################
@@ -61,16 +61,10 @@ plugins_inactive:
   - custom-post-type-ui
   - search-and-replace
   - capability-manager-enhanced
-  - user-switching
-  - favicon-by-realfavicongenerator
-  - disable-comments
   #administration
   - adminimize
   - admin-menu-editor
   - admin-menu-reorder
-  - enable-media-replace
-  - duplicate-post
-  - simple-page-ordering
   - wordpress-seo
   #security/backup
   - wp-security-audit-log
