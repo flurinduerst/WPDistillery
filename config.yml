@@ -3,8 +3,7 @@
 # Author: Flurin Dürst » github.com/flurinduerst
 # URL: https://github.com/flurinduerst/WPDistillery
 #
-# WP Distillery Version 1.51
-# File Version 1.41
+# File Version 1.42
 
 # SETUP SETTINGS
 #################################################################
@@ -59,7 +58,6 @@ plugins_active:
 # plugins to install
 plugins_inactive:
   #development
-  - regenerate-thumbnails
   - custom-post-type-ui
   - search-and-replace
   - capability-manager-enhanced

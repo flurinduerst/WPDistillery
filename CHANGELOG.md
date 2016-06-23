@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Head
+* remove dublicated plugin entry
+* remove WPDistillery Version from config/setup - remain at README
+
 ## 1.51
 * Bugfixes
 

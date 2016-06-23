@@ -5,7 +5,6 @@
 # Author: Flurin Dürst » github.com/flurinduerst
 # URL: https://github.com/flurinduerst/WPDistillery
 #
-# ScWPSetup Version 1.51
 # File Version 1.43
 
 set -e
