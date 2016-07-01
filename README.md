@@ -47,8 +47,12 @@ git clone https://github.com/scotch-io/scotch-box.git && mv scotch-box/public pu
 
 #### Known Issues
 * Currently Scotch Box comes with `WP-CLI 0.20.3` The WP-CLI released compatibility updates for WordPress 4.4 and now requires Version `0.20.4+`. Please update wp cli on the VM with `sudo wp cli update --allow-root`. See [issue#158](https://github.com/scotch-io/scotch-box/issues/158)
-* When using Wordmove (install it with `gem install wordmove` on the VM) you have to complete the locale settings by adding them to `.bashrc`: `echo "export LANGUAGE=en_US.UTF-8">>~/.bashrc
-echo "export LC_ALL=en_US.UTF-8 ">>~/.bashrc` then `exit` and `vagrant ssh` and you're good to go. (This is a ScotchBox issue but I wanted to clarify this for everyone using Wordmove.)
+* When using Wordmove (install it with `gem install wordmove` on the VM) you have to complete the locale settings by adding them to `.bashrc`: 
+``` 
+echo "export LANGUAGE=en_US.UTF-8">>~/.bashrc
+echo "export LC_ALL=en_US.UTF-8 ">>~/.bashrc
+```
+then `exit` and `vagrant ssh` and you're good to go. (This is a ScotchBox issue but I wanted to clarify this for everyone using Wordmove.)
 
 ##### About
 * Author: Flurin Dürst
