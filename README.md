@@ -47,8 +47,8 @@ git clone https://github.com/scotch-io/scotch-box.git && mv scotch-box/public pu
 
 #### Known Issues
 * Currently Scotch Box comes with `WP-CLI 0.20.3` The WP-CLI released compatibility updates for WordPress 4.4 and now requires Version `0.20.4+`. Please update wp cli on the VM with `sudo wp cli update --allow-root`. See [issue#158](https://github.com/scotch-io/scotch-box/issues/158)
-* When using Wordmove (install it with `gem install wordmove` on the VM) you have to complete the locale settings by adding them to `.bashrc`: 
-``` 
+* When using Wordmove (install it with `gem install wordmove` on the VM) you have to complete the locale settings by adding them to `.bashrc`:
+```
 echo "export LANGUAGE=en_US.UTF-8">>~/.bashrc
 echo "export LC_ALL=en_US.UTF-8 ">>~/.bashrc
 ```
@@ -66,7 +66,7 @@ Feel free to contact me or add issues/pull-requests.
 WPSeed is released under the terms of the GNU General Public License
 
 ## Like it? Awesome!
-If you find this tool useful, consider supporting WP Distillery or [buying me a glass of single malt scotch whiskey](https://www.paypal.me/FlurinDuerst/10) :)
+If you find this tool useful, consider supporting WP Distillery or [buying me a beer](https://www.paypal.me/FlurinDuerst/5) respectively [a glass of single malt scotch whiskey](https://www.paypal.me/FlurinDuerst/10) :)
 
 
 --------------------------------------------------------------
@@ -179,11 +179,11 @@ Maybe you don't want WP Distillery to install a theme? Or you prefer keeping the
 * `wp` (default true): install WordPress core
 * `theme` (default true): install and activate the theme defined above
 * `plugins` (default true): install the plugins listed
-* `cleanup` (default true): delete WordPress default as followed
-*   `comment` (default true): the default comment
-*   `posts` (default false): the default post
-*   `files` (default true): `readme.html`, `license.txt`
-*   `themes` (default true): the twentyfourteen, twentyfifteen and twentysixteen theme.
+* `cleanup` (default true): delete WordPress defaults as followed
+  * `comment` (default true): the default comment
+  * `posts` (default false): the default post
+  * `files` (default true): `readme.html`, `license.txt`
+  * `themes` (default true): the twentyfourteen, twentyfifteen and twentysixteen theme.
 
 ```yaml
 # SETUP OPTIONS
