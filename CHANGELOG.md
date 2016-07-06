@@ -1,6 +1,7 @@
 # CHANGELOG
 
 ## Head
+* add google-sitemap-generator to preset plugins
 * remove dublicated plugin entry
 * remove WPDistillery Version from config/setup - remain at README
 
