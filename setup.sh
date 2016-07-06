@@ -5,9 +5,20 @@
 # Author: Flurin Dürst » github.com/flurinduerst
 # URL: https://github.com/flurinduerst/WPDistillery
 #
-# File Version 1.43
+# File Version 1.5
 
-set -e
+# ERROR Handler
+# ask user to continue on error
+function continue_error {
+  read -p "$(echo -e "${RED}Do you want to continue anyway? (y/n) ${NC}")" -n 1 -r
+  if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+    printf "\n${RED}»»» aborting WPDistillery setup! ${NC}\n"
+    exit 1
+  else
+    printf "\n${GRN}»»» continuing WPDistillery setup... ${NC}\n"
+  fi
+}
+trap 'continue_error' ERR
 
 # REQUIREMENTS
 ####################################################################################################
