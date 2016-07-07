@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Head | 1.5.1
+* bugfix (now correctly checking `theme_rename`)
+
 ## 1.6
 * add error handler that asks the user to continue if an error occured
 * add google-sitemap-generator to preset plugins

@@ -1,6 +1,6 @@
 ![Screenshot](http://wpdistillery.org/sharedcontent/wpdistillery_logo.png)
 
-***Version:*** 1.6
+***Version:*** 1.6.1
 
 #### What/How/Why
 WP Distillery does all the work for you when setting up a new WordPress project with [Scotch Box](https://box.scotch.io/). Simply add your preferred theme, plugins, options etc. into `config.yml` and your good to go. With WPDistillery it won't take you no longer than 5 minutes until you can start working on your new WordPress project.
@@ -22,13 +22,13 @@ Watch [WPDistillery in action](https://youtu.be/sQqeCtFso3o) or see this [Screen
 - ssh access to your VM/host
 - [wp cli](https://wp-cli.org/) 0.23+ on your VM/host
 
-WP Distillery is made to work with [Scotch Box](https://box.scotch.io/). Since `WPDistillery Version 1.3.1+` you can edit the WordPress root folder so you should be able to run with any other vagrantbox or webhost (see [WPDistillery without using Sotch Box](https://github.com/flurinduerst/WPDistillery#setup-without-using-scotch-box)).
+WP Distillery is designed for [Scotch Box](https://box.scotch.io/). Since `WPDistillery Version 1.3.1+` you can edit the WordPress root folder so you should be able to run with any other vagrantbox or webhost.
 
 
 ## Setup
 To setup a new project running Scotch Box and WordPress simply follow these steps:
 
-1. Run the following command inside your project root to install Scotch Box & WPDistillery:
+1. Run the following command inside your project root to install both Scotch Box & WPDistillery:
 ```bash
 git clone https://github.com/scotch-io/scotch-box.git && mv scotch-box/public public && mv scotch-box/Vagrantfile Vagrantfile && rm -rf scotch-box && git clone --depth 1 git@github.com:flurinduerst/WPDistillery.git && mv WPDistillery/config.yml config.yml && mv WPDistillery/setup.sh setup.sh && rm -rf WPDistillery
 ```
@@ -37,13 +37,6 @@ git clone https://github.com/scotch-io/scotch-box.git && mv scotch-box/public pu
 5. update wp cli `sudo wp cli update --allow-root` see [Known Issues](https://github.com/flurinduerst/WPDistillery#known-issues)
 6. execute setup.sh `cd ../../var/www/ && bash setup.sh`
 
-
-#### Setup without using Scotch Box
-1. install your vagrantbox of choice or use your webhost for the following steps
-2. clone WP Distillery into project
-2. add environment variables and your preferred options into `config.yml` (see [configuration file in detail](https://github.com/flurinduerst/WPDistillery#the-configuration-file-in-detail) for additional info on config.yml)
-
-5. execute `setup.sh`
 
 #### Known Issues
 * Currently Scotch Box comes with `WP-CLI 0.20.3` The WP-CLI released compatibility updates for WordPress 4.4 and now requires Version `0.20.4+`. Please update wp cli on the VM with `sudo wp cli update --allow-root`. See [issue#158](https://github.com/scotch-io/scotch-box/issues/158)

@@ -5,7 +5,7 @@
 # Author: Flurin Dürst » github.com/flurinduerst
 # URL: https://github.com/flurinduerst/WPDistillery
 #
-# File version 1.5.1
+# File version 1.5.2
 
 # ERROR Handler
 # ask user to continue on error
@@ -89,7 +89,7 @@ if $CONF_installation_theme ; then
   printf "${BLU}»»» downloading $CONF_theme_name...${NC}\n"
   wp theme install $CONF_theme_url
   printf "${BLU}»»» installing/activating $CONF_theme_name...${NC}\n"
-  if [ $CONF_theme_rename != "" ]; then
+  if [[ $CONF_theme_rename != "" ]]; then
     # rename theme
     printf "${BLU}»»» renaming $CONF_theme_name to $CONF_theme_rename...${NC}\n"
     mv wp-content/themes/$CONF_theme_name-master wp-content/themes/$CONF_theme_rename
