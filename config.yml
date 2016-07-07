@@ -3,14 +3,16 @@
 # Author: Flurin Dürst » github.com/flurinduerst
 # URL: https://github.com/flurinduerst/WPDistillery
 #
-# File Version 1.44
+# File Version 1.45
 
 # SETUP SETTINGS
 #################################################################
 
-# WordPress folder to execute the setup
+# WordPress folder
 wpfolder: public
-wplocale: de_CH
+
+# core language
+wplocale: en_GB
 
 # admin user settings
 admin:
@@ -36,7 +38,7 @@ wpsettings:
 # THEME
 #################################################################
 
-# theme to install choose new name in 'rename' or leave empty
+# theme to install, choose new name in 'rename' or leave empty
 theme:
   name: WPSeed
   rename: ""
@@ -73,7 +75,7 @@ plugins_inactive:
 
 # SETUP OPTIONS
 ####################################################################
-# if you don't want the setup to run all tasks set them to false
+# if you don't want the setup to run all tasks, set them to false
 
 installation:
   wp: true
