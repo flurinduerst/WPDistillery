@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Head | 1.5.1
+## 1.6.1
 * bugfix (now correctly checking `theme_rename`)
 
 ## 1.6
