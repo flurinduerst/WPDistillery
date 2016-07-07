@@ -5,7 +5,7 @@
 # Author: Flurin Dürst » github.com/flurinduerst
 # URL: https://github.com/flurinduerst/WPDistillery
 #
-# File Version 1.5
+# File version 1.5.1
 
 # ERROR Handler
 # ask user to continue on error
@@ -55,7 +55,7 @@ NC='\033[0m' # no color
 # EXECUTIVE SETUP
 ####################################################################################################
 
-printf "${BRN}========== WP DISTILLERY START ==========${NC}\n\n"
+printf "${BRN}========== WPDISTILLERY START ==========${NC}\n\n"
 
 # READ CONFIG
 eval $(parse_yaml config.yml "CONF_")
@@ -153,4 +153,4 @@ fi
 printf "${BLU}»»» checking wp cli version${NC}\n"
 wp cli check-update
 
-printf "${BRN}========== WP DISTILLERY FINISHED ==========${NC}\n"
+printf "${BRN}========== WPDISTILLERY FINISHED ==========${NC}\n"
