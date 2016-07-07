@@ -12,13 +12,13 @@
 wpfolder: public
 
 # core language
-wplocale: en_GB
+wplocale: en_US
 
 # admin user settings
 admin:
   user: admin
   password: admin
-  email: admin@mail.com
+  email: mail@domain.tld
 
 # scotch box db access
 db:
