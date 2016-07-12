@@ -2,7 +2,7 @@
 
 ***Version:*** 1.6.1
 
-#### What/How/Why
+## What/How/Why
 WP Distillery does all the work for you when setting up a new WordPress project with [Scotch Box](https://box.scotch.io/). Simply add your preferred theme, plugins, options etc. into `config.yml` and your good to go. With WPDistillery it won't take you no longer than 5 minutes until you can start working on your new WordPress project.
 Executing setup.sh then will
 - download/install/configure WordPress
@@ -22,7 +22,7 @@ Watch [WPDistillery in action](https://youtu.be/sQqeCtFso3o) or see this [Screen
 - ssh access to your VM/host
 - [wp cli](https://wp-cli.org/) 0.23+ on your VM/host
 
-WP Distillery is designed for [Scotch Box](https://box.scotch.io/). Since `WPDistillery Version 1.3.1+` you can edit the WordPress root folder so you should be able to run with any other vagrantbox or webhost.
+WP Distillery is designed for [Scotch Box](https://box.scotch.io/). Since `WPDistillery Version 1.3.1+` you can edit the WordPress root folder so you should be able to run it with any other vagrantbox or webhost.
 
 
 ## Setup
@@ -38,7 +38,7 @@ git clone https://github.com/scotch-io/scotch-box.git && mv scotch-box/public pu
 6. execute setup.sh `cd ../../var/www/ && bash setup.sh`
 
 
-#### Known Issues
+## Known Issues
 * Currently Scotch Box comes with `WP-CLI 0.20.3` The WP-CLI released compatibility updates for WordPress 4.4 and now requires Version `0.20.4+`. Please update wp cli on the VM with `sudo wp cli update --allow-root`. See [issue#158](https://github.com/scotch-io/scotch-box/issues/158)
 * When using Wordmove (install it with `gem install wordmove` on the VM) you have to complete the locale settings by adding them to `.bashrc`:
 ```
@@ -47,7 +47,7 @@ echo "export LC_ALL=en_US.UTF-8 ">>~/.bashrc
 ```
 then `exit` and `vagrant ssh` and you're good to go. (This is a ScotchBox issue but I wanted to clarify this for everyone using Wordmove.)
 
-##### About
+## About
 * Author: Flurin Dürst
 * Contact: [flurin@flurinduerst.ch](mailto:flurin@flurinduerst.ch)
 * Twitter: [@flurinduerst](https://twitter.com/flurinduerst)
