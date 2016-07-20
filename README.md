@@ -1,4 +1,4 @@
-![Screenshot](http://files.flurindeurst.ch/wpdistillery/wpdistillery_logo.png)
+![Screenshot](http://files.flurinduerst.ch/wpdistillery/wpdistillery_logo.png)
 
 ***Version:*** 1.6.1
 
@@ -15,7 +15,7 @@ You're able to adjust wich of the above tasks will be executed. Simply set the d
 
 Now you can use your `config.yml` as a template for every new project and save a lot of time clicking, dragging, editing and configuring.
 
-Watch [WPDistillery in action](https://youtu.be/sQqeCtFso3o) or see this [Screenshot](http://files.flurindeurst.ch/wpdistillery/setup_screenshot.jpg) for a preview of how the setup will look like.
+Watch [WPDistillery in action](https://youtu.be/sQqeCtFso3o) or see this [Screenshot](http://files.flurinduerst.ch/wpdistillery/setup_screenshot.jpg) for a preview of how the setup will look like.
 
 
 #### Dependencies
