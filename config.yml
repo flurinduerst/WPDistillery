@@ -3,7 +3,7 @@
 # Author: Flurin Dürst » github.com/flurinduerst
 # URL: https://github.com/flurinduerst/WPDistillery
 #
-# File version 1.4.6
+# File version 1.4.7
 
 # SETUP SETTINGS
 #################################################################
@@ -33,7 +33,7 @@ db:
 wpsettings:
   url: example.dev
   title: My Site
-  rewrite_structure: /%postname%/
+  permalink_structure: /%postname%/
 
 # THEME
 #################################################################

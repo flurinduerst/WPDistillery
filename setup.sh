@@ -5,7 +5,7 @@
 # Author: Flurin Dürst » github.com/flurinduerst
 # URL: https://github.com/flurinduerst/WPDistillery
 #
-# File version 1.5.2
+# File version 1.5.3
 
 # ERROR Handler
 # ask user to continue on error
@@ -63,7 +63,7 @@ eval $(parse_yaml config.yml "CONF_")
 # CHECK WP FOLDER
 if [ ! -d "$CONF_wpfolder" ]; then
   mkdir $CONF_wpfolder
-  printf "${BLU}»»» creating WP Folder CONF_wpfolder...${NC}\n"
+  printf "${BLU}»»» creating WP Folder $CONF_wpfolder...${NC}\n"
 fi
 
 cd $CONF_wpfolder
@@ -78,7 +78,7 @@ if $CONF_installation_wp ; then
   printf "${BLU}»»» installing wordpress...${NC}\n"
   wp core install --url=$CONF_wpsettings_url --title="$CONF_wpsettings_title" --admin_user=$CONF_admin_user --admin_password=$CONF_admin_password --admin_email=$CONF_admin_email
   printf "${BLU}»»» configure settings...${NC}\n"
-  wp rewrite structure $CONF_wpsettings_rewrite_structure
+  wp rewrite structure $CONF_wpsettings_permalink_structure
 else
   printf "${BLU}-> skipping WordPress installation...${NC}\n"
 fi
@@ -89,7 +89,7 @@ if $CONF_installation_theme ; then
   printf "${BLU}»»» downloading $CONF_theme_name...${NC}\n"
   wp theme install $CONF_theme_url
   printf "${BLU}»»» installing/activating $CONF_theme_name...${NC}\n"
-  if [[ $CONF_theme_rename != "" ]]; then
+  if [ ! -z "$CONF_theme_rename" ]; then
     # rename theme
     printf "${BLU}»»» renaming $CONF_theme_name to $CONF_theme_rename...${NC}\n"
     mv wp-content/themes/$CONF_theme_name-master wp-content/themes/$CONF_theme_rename
