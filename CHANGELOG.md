@@ -5,7 +5,6 @@
   * custom page to be used as front_page
   * timezone
   * description
-  * title as blogtitle
   * default image sizes
 * add settings setup task
 * small bugfixes

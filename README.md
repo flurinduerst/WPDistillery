@@ -1,6 +1,7 @@
 ![Screenshot](http://files.flurinduerst.ch/wpdistillery/wpdistillery_logo.png)
 
 **Version:** 1.7
+**Update Note:** Version 1.7 brings lots of new settings. Check out the [configuration file documentation](README_CONFIG.md).
 
 ## What/How/Why
 WP Distillery does all the work for you when setting up a new WordPress project with [Scotch Box](https://box.scotch.io/). Simply add your preferred theme, plugins, options etc. into `config.yml` and your good to go. With WPDistillery it won't take you no longer than 5 minutes until you can start working on your new WordPress project.
@@ -32,7 +33,7 @@ To setup a new project running Scotch Box and WordPress simply follow these step
 ```bash
 git clone https://github.com/scotch-io/scotch-box.git && mv scotch-box/public public && mv scotch-box/Vagrantfile Vagrantfile && rm -rf scotch-box && git clone --depth 1 git@github.com:flurinduerst/WPDistillery.git && mv WPDistillery/config.yml config.yml && mv WPDistillery/setup.sh setup.sh && rm -rf WPDistillery
 ```
-2. add environment variables and your preferred options into `config.yml` (see [configuration file in detail](https://github.com/flurinduerst/WPDistillery#the-configuration-file-in-detail) for additional info on config.yml)
+2. add environment variables and your preferred options into `config.yml` (see [configuration file documentation](README_CONFIG.md) for additional info on `config.yml)
 4. `vagrant up` then `vagrant ssh`
 5. update wp cli `sudo wp cli update --allow-root` see [Known Issues](https://github.com/flurinduerst/WPDistillery#known-issues)
 6. execute setup.sh `cd ../../var/www/ && bash setup.sh`
@@ -60,157 +61,3 @@ WPSeed is released under the terms of the GNU General Public License
 
 ## Like it? Awesome!
 If you find this tool useful, consider supporting WP Distillery or [buying me a beer](https://www.paypal.me/FlurinDuerst/5) respectively [a glass of single malt scotch whiskey](https://www.paypal.me/FlurinDuerst/10) :)
-
-
---------------------------------------------------------------
---------------------------------------------------------------
-
-
-### The configuration file in detail
-
-In this section, we will go through the `config.yml` step by step as I will explain the options available.
-
-In **`wpfolder`** you define the folder containing WordPress. Within the current version of Scotch Box this is `public` by default.
-With **`wplocale`** you can select what language to download and install WordPress. Use language Codes like `en_US` or `en_GB`.
-Add your timezone as string to **`timezone`**. See [List of Supported Timezones](http://php.net/manual/en/timezones.php).
-**`admin`** defines the default admin user. Set your preferred username, password and email.
-**`db`** contains the access data to connect WordPress to the database on the Virtual Machine. By default no changes are needed here.
-```yaml
-# SETUP SETTINGS
-#################################################################
-
-# WordPress folder
-wpfolder: public
-
-# language/timezone
-wplocale: en_US
-timezone: America/New_York
-
-# admin user settings
-admin:
-  user: admin
-  password: admin
-  email: mail@domain.tld
-
-# scotch box db access
-db:
-  name: scotchbox
-  user: root
-  pass: root
-  prefix: wp_
-```
-
-
-In **`wpsettings`** you can define WP-Options like url, title, description, the permalink_structure or edit the default image sizes.
-Set **`page_on_front`** to true to set **`frontpage_name`** as default front page.
-If you set **`convert_smilies`** false, smilies wont be converted do image-smilies automatically.
-Note: To edit the url you use to access the website within your browser edit `config.vm.hostname` in the Vagrantfile from Scotch Box.
-
-```yaml
-# WORDPRESS SETTINGS
-#################################################################
-
-wpsettings:
-  url: wpdistillery.dev
-  title: Example
-  description: Example Description
-  permalink_structure: /%postname%/
-  # default image sizes
-  thumbnail_width: 150
-  thumbnail_height: 150
-  medium_width: 300
-  medium_height: 300
-  large_width: 1024
-  large_height: 1024
-  # use page as frontpage
-  page_on_front: true
-    frontpage_name: Example Front Page
-  # automatic converttion of smilies
-  convert_smilies: false
-```
-
-Now you can install a (starter-) theme if you want. Simply add the name and download-url of the theme. WP Distillery will then download, unzip and install the theme. If you do not leave `rename` empty. The it will also rename the installed theme for you.
-```yaml
-# THEME
-#################################################################
-
-# theme to install choose new name in 'rename' or leave empty
-theme:
-  name: WPSeed
-  rename: ""
-  url: https://github.com/flurinduerst/WPSeed/archive/master.zip
-```
-
-You can select what plugins you want WP Distillery to install for you. Split into two sections you can define which plugins to download and install, and which to also activate. By default this section contains a few recommendations.
-
-```yaml
-# PLUGINS
-#################################################################
-
-# plugins to install & activate
-plugins_active:
-  - disable-comments
-  - duplicate-post
-  - enable-media-replace
-  - favicon-by-realfavicongenerator
-  - regenerate-thumbnails
-  - simple-page-ordering
-  - user-switching
-
-# plugins to install
-plugins_inactive:
-  #development
-  - regenerate-thumbnails
-  - custom-post-type-ui
-  - search-and-replace
-  - capability-manager-enhanced
-  - user-switching
-  - favicon-by-realfavicongenerator
-  - disable-comments
-  #administration
-  - adminimize
-  - admin-menu-editor
-  - admin-menu-reorder
-  - enable-media-replace
-  - duplicate-post
-  - simple-page-ordering
-  - wordpress-seo
-  #security/backup
-  - wp-security-audit-log
-  - backwpup
-```
-
-If you want to install custom or premium plugins you can simply write down the download-url instead of the name. Make sure to add quotes:
-
-```yaml
-plugins_active:
-  - "https://example.com/plugins/awesome_plugin.zip&key=31071988"
-```
-
-Maybe you don't want WP Distillery to install a theme? Or you prefer keeping the default posts and files it comes with? Within the setup options at the bottom of the file you can tell WP Distillery which tasks to perform. Simply set those you wan't to skip to `false`.
-* **`wp`**: install WordPress core
-* **`settings`**: set custom WordPress settings (Note: the value defined `timezone` is also considered a setting)
-* **`theme`**: install and activate the theme defined above
-* **`plugins`**: install the plugins listed
-* **`cleanup`**: delete WordPress defaults as followed
-  * **`comment`**: the default comment
-  * **`posts`**: the default post
-  * **`files`**: `readme.html`, `license.txt`
-  * **`themes`**: the twentyfourteen, twentyfifteen and twentysixteen theme.
-
-```yaml
-# SETUP OPTIONS
-####################################################################
-# if you don't want the setup to run all tasks set them to false
-
-setup:
-  wp: true
-  settings: true
-  theme: true
-  plugins: true
-  cleanup: true
-    comment: true
-    posts: true
-    files: true
-    themes: true
-```

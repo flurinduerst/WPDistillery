@@ -5,7 +5,7 @@
 #
 # File version 1.5
 
-# SETUP SETTINGS
+# INSTALLATION
 #################################################################
 
 # WordPress folder
@@ -28,7 +28,7 @@ db:
   pass: root
   prefix: wp_
 
-# WORDPRESS SETTINGS
+# SETTINGS
 #################################################################
 
 wpsettings:
@@ -87,7 +87,7 @@ plugins_inactive:
   - wp-security-audit-log
   - backwpup
 
-# SETUP OPTIONS
+# WPDISTILLERY SETUP
 ####################################################################
 # if you don't want the setup to run all tasks, set them to false
 
