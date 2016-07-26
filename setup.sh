@@ -5,7 +5,7 @@
 # Author: Flurin Dürst » github.com/flurinduerst
 # URL: https://github.com/flurinduerst/WPDistillery
 #
-# File version 1.5.3
+# File version 1.6
 
 # ERROR Handler
 # ask user to continue on error
@@ -69,7 +69,7 @@ fi
 cd $CONF_wpfolder
 
 # INSTALL WORDPRESS
-if $CONF_installation_wp ; then
+if $CONF_setup_wp ; then
   printf "${BRN}[=== INSTALL WORDPRESS ===]${NC}\n"
   printf "${BLU}»»» downloading WordPress...${NC}\n"
   wp core download --locale=$CONF_wplocale
@@ -77,14 +77,42 @@ if $CONF_installation_wp ; then
   wp core config --dbname=$CONF_db_name --dbuser=$CONF_db_user --dbpass=$CONF_db_pass --dbprefix=$CONF_db_prefix --locale=$CONF_wplocale
   printf "${BLU}»»» installing wordpress...${NC}\n"
   wp core install --url=$CONF_wpsettings_url --title="$CONF_wpsettings_title" --admin_user=$CONF_admin_user --admin_password=$CONF_admin_password --admin_email=$CONF_admin_email
-  printf "${BLU}»»» configure settings...${NC}\n"
-  wp rewrite structure $CONF_wpsettings_permalink_structure
 else
-  printf "${BLU}-> skipping WordPress installation...${NC}\n"
+  printf "${BLU}>>> skipping WordPress installation...${NC}\n"
+fi
+
+if $CONF_setup_settings ; then
+  printf "${BLU}»»» configure settings...${NC}\n"
+  printf "» timezone:\n"
+  wp option update timezone $CONF_timezone
+  wp option update timezone_string $CONF_timezone
+  printf "» permalink structure:\n"
+  wp rewrite structure "$CONF_wpsettings_permalink_structure"
+  printf "» description:\n"
+  wp option update blogdescription "$CONF_wpsettings_description"
+  printf "» image sizes:\n"
+  wp option update thumbnail_size_w $CONF_wpsettings_thumbnail_width
+  wp option update thumbnail_size_h $CONF_wpsettings_thumbnail_height
+  wp option update medium_size_w $CONF_wpsettings_medium_width
+  wp option update medium_size_h $CONF_wpsettings_medium_height
+  wp option update large_size_w $CONF_wpsettings_large_width
+  wp option update large_size_h $CONF_wpsettings_large_height
+  if ! $CONF_wpsettings_convert_smilies ; then
+    wp option update convert_smilies 0
+  fi
+  if $CONF_wpsettings_page_on_front ; then
+    printf "» front page:\n"
+    # create and set frontpage
+    wp post create --post_type=page --post_title="$CONF_wpsettings_page_on_front_frontpage_name" --post_content='Front Page created by WPDistillery' --post_status=publish
+    wp option update page_on_front $(wp post list --post_type=page --post_status=publish --posts_per_page=1 --pagename="$CONF_wpsettings_page_on_front_frontpage_name" --field=ID --format=ids)
+    wp option update show_on_front 'page'
+  fi
+else
+  printf "${BLU}>>> skipping settings...${NC}\n"
 fi
 
 # INSTALL THEME
-if $CONF_installation_theme ; then
+if $CONF_setup_theme ; then
   printf "${BRN}[=== INSTALL $CONF_theme_name ===]${NC}\n"
   printf "${BLU}»»» downloading $CONF_theme_name...${NC}\n"
   wp theme install $CONF_theme_url
@@ -99,37 +127,40 @@ if $CONF_installation_theme ; then
     wp theme activate $CONF_theme_name
   fi
 else
-  printf "${BLU}»»» skipping theme installation...${NC}\n"
+  printf "${BLU}>>> skipping theme installation...${NC}\n"
 fi
 
 # CLEANUP
-if $CONF_installation_cleanup ; then
+if $CONF_setup_cleanup ; then
   printf "${BRN}[=== CLEANUP ===]${NC}\n"
-  if $CONF_installation_cleanup_comment ; then
+  if $CONF_setup_cleanup_comment ; then
     printf "${BLU}»»» removing default comment...${NC}\n"
     wp comment delete 1 --force
   fi
-  if $CONF_installation_cleanup_posts ; then
+  if $CONF_setup_cleanup_posts ; then
     printf "${BLU}»»» removing default posts...${NC}\n"
     wp post delete 1 2 --force
   fi
-  if $CONF_installation_cleanup_files ; then
+  if $CONF_setup_cleanup_files ; then
     printf "${BLU}»»» removing WP readme/license files...${NC}\n"
-    rm readme.html
-    rm license.txt
+    # delete default files
+    if [ -f readme.html ];    then rm readme.html;    fi
+    if [ -f license.txt ];    then rm license.txt;    fi
+    # delete german files
+    if [ -f liesmich.html ];  then rm liesmich.html;  fi
   fi
-  if $CONF_installation_cleanup_themes ; then
+  if $CONF_setup_cleanup_themes ; then
     printf "${BLU}»»» removing default themes...${NC}\n"
     wp theme delete twentyfourteen
     wp theme delete twentyfifteen
     wp theme delete twentysixteen
   fi
 else
-  printf "${BLU}»»» skipping Cleanup...${NC}\n"
+  printf "${BLU}>>> skipping Cleanup...${NC}\n"
 fi
 
 # PLUGINS
-if $CONF_installation_plugins ; then
+if $CONF_setup_plugins ; then
   printf "${BRN}[=== PLUGINS ===]${NC}\n"
   printf "${BLU}»»» removing WP default plugins${NC}\n"
   wp plugin delete akismet
@@ -146,7 +177,7 @@ if $CONF_installation_plugins ; then
     wp plugin install $entry
   done
 else
-  printf "${BLU}»»» skipping Plugin installation...${NC}\n"
+  printf "${BLU}>>> skipping Plugin installation...${NC}\n"
 fi
 
 # MISC

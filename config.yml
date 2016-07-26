@@ -3,7 +3,7 @@
 # Author: Flurin Dürst » github.com/flurinduerst
 # URL: https://github.com/flurinduerst/WPDistillery
 #
-# File version 1.4.7
+# File version 1.5
 
 # SETUP SETTINGS
 #################################################################
@@ -11,8 +11,9 @@
 # WordPress folder
 wpfolder: public
 
-# core language
+# language/timezone
 wplocale: en_US
+timezone: America/New_York
 
 # admin user settings
 admin:
@@ -31,9 +32,22 @@ db:
 #################################################################
 
 wpsettings:
-  url: example.dev
-  title: My Site
+  url: wpdistillery.dev
+  title: Example Title
+  description: Example Description
   permalink_structure: /%postname%/
+  # default image sizes
+  thumbnail_width: 150
+  thumbnail_height: 150
+  medium_width: 300
+  medium_height: 300
+  large_width: 1024
+  large_height: 1024
+  # use page as frontpage
+  page_on_front: true
+    frontpage_name: Example Front Page
+  # automatic converttion of smilies
+  convert_smilies: false
 
 # THEME
 #################################################################
@@ -77,8 +91,9 @@ plugins_inactive:
 ####################################################################
 # if you don't want the setup to run all tasks, set them to false
 
-installation:
+setup:
   wp: true
+  settings: true
   theme: true
   plugins: true
   cleanup: true

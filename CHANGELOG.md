@@ -1,8 +1,15 @@
 # CHANGELOG
 
-## Head
+# 1.7
+* add additional options
+  * custom page to be used as front_page
+  * timezone
+  * description
+  * title as blogtitle
+  * default image sizes
+* add settings setup task
 * small bugfixes
-* cleanup
+* cleanup/renaming
 
 ## 1.6.1
 * bugfix (now correctly checking `theme_rename`)
