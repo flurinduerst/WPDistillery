@@ -1,5 +1,8 @@
 # CHANGELOG
 
+# 1.7.1
+* fixed a bug that caused an error if a theme was installed that doesn't end with `-master.zip`
+
 # 1.7
 * add additional options
   * custom page to be used as front_page
