@@ -10,11 +10,12 @@ The configuration file is split into five sections:
 * WPDistillery Setup
 
 ## Installation
-In **`wpfolder`** you define the folder containing WordPress. Within the current version of Scotch Box this is `public` by default.
-With **`wplocale`** you can select what language to download and install WordPress. Use language Codes like `en_US` or `en_GB`.
-Add your timezone as string to **`timezone`**. See [List of Supported Timezones](http://php.net/manual/en/timezones.php).
-**`admin`** defines the default admin user. Set your preferred username, password and email.
-**`db`** contains the access data to connect WordPress to the database on the Virtual Machine. By default no changes are needed here.
+* In **`wpfolder`** you define the folder containing WordPress. Within the current version of Scotch Box this is `public` by default.
+* With **`wplocale`** you can select what language to download and install WordPress. Use language Codes like `en_US` or `en_GB`.
+* Add your timezone as string to **`timezone`**. See [List of Supported Timezones](http://php.net/manual/en/timezones.php).
+* **`admin`** defines the default admin user. Set your preferred username, password and email.
+* **`db`** contains the access data to connect WordPress to the database on the Virtual Machine. By default (when using ScotchBox) no changes are needed here.
+
 ```yaml
 # INSTALLATION
 #################################################################
@@ -41,10 +42,10 @@ db:
 ```
 
 ## Settings
-In **`wpsettings`** you can define WP-Options like url, title, description, the permalink_structure or edit the default image sizes.
-Set **`page_on_front`** to true to set **`frontpage_name`** as default front page.
-If you set **`convert_smilies`** false, smilies wont be converted do image-smilies automatically.
-Note: To edit the url you use to access the website within your browser edit `config.vm.hostname` in the Vagrantfile from Scotch Box.
+* In **`wpsettings`** you can define WP-Options like url, title, description, the permalink_structure or edit the default image sizes.
+* Set **`page_on_front`** to true to set **`frontpage_name`** as default front page.
+* If you set **`convert_smilies`** false, smilies wont be converted to image-smilies automatically.
+* Note: To edit the url you use to access the website within your browser edit `config.vm.hostname` in the Vagrantfile from Scotch Box.
 
 ```yaml
 # SETTINGS
@@ -70,7 +71,8 @@ wpsettings:
 ```
 
 ## Theme
-Now you can install a (starter-) theme if you want. Simply add the name and download-url of the theme. WP Distillery will then download, unzip and install the theme. If you do not leave `rename` empty. The it will also rename the installed theme for you.
+Now you can install a (starter-) theme if you want. Simply add the name and download-url of the theme. WP Distillery will then download, unzip and install the theme. If you do not leave `rename` empty. It will also rename the installed theme for you.
+
 ```yaml
 # THEME
 #################################################################
