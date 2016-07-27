@@ -1,6 +1,7 @@
 ![Screenshot](http://files.flurinduerst.ch/wpdistillery/wpdistillery_logo.png)
 
 **Version:** 1.7
+
 **Update Note:** Version 1.7 brings lots of new settings. Check out the [configuration file documentation](README_CONFIG.md).
 
 ## What/How/Why
@@ -19,7 +20,7 @@ Now you can use your `config.yml` as a template for every new project and save a
 Watch [WPDistillery in action](https://youtu.be/sQqeCtFso3o) or see this [Screenshot](http://files.flurinduerst.ch/wpdistillery/setup_screenshot.jpg) for a preview of how the setup will look like.
 
 
-#### Dependencies
+## Dependencies
 - ssh access to your VM/host
 - [wp cli](https://wp-cli.org/) 0.23+ on your VM/host
 
@@ -33,7 +34,7 @@ To setup a new project running Scotch Box and WordPress simply follow these step
 ```bash
 git clone https://github.com/scotch-io/scotch-box.git && mv scotch-box/public public && mv scotch-box/Vagrantfile Vagrantfile && rm -rf scotch-box && git clone --depth 1 git@github.com:flurinduerst/WPDistillery.git && mv WPDistillery/config.yml config.yml && mv WPDistillery/setup.sh setup.sh && rm -rf WPDistillery
 ```
-2. add environment variables and your preferred options into `config.yml` (see [configuration file documentation](README_CONFIG.md) for additional info on `config.yml)
+2. add environment variables and your preferred options into `config.yml` (see [configuration file documentation](README_CONFIG.md) for additional info on `config.yml`)
 4. `vagrant up` then `vagrant ssh`
 5. update wp cli `sudo wp cli update --allow-root` see [Known Issues](https://github.com/flurinduerst/WPDistillery#known-issues)
 6. execute setup.sh `cd ../../var/www/ && bash setup.sh`
