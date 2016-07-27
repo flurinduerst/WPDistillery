@@ -95,10 +95,10 @@ plugins_inactive:
 
 setup:
   wp: true
-  settings: false
+  settings: true
   theme: true
-  plugins: false
-  cleanup: false
+  plugins: true
+  cleanup: true
     comment: true
     posts: true
     files: true
