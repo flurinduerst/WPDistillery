@@ -102,24 +102,18 @@ plugins_active:
   - regenerate-thumbnails
   - simple-page-ordering
   - user-switching
+  - google-sitemap-generator
 
 # plugins to install
 plugins_inactive:
   #development
-  - regenerate-thumbnails
   - custom-post-type-ui
   - search-and-replace
   - capability-manager-enhanced
-  - user-switching
-  - favicon-by-realfavicongenerator
-  - disable-comments
   #administration
   - adminimize
   - admin-menu-editor
   - admin-menu-reorder
-  - enable-media-replace
-  - duplicate-post
-  - simple-page-ordering
   - wordpress-seo
   #security/backup
   - wp-security-audit-log

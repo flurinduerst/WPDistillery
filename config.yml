@@ -1,9 +1,13 @@
 # Configuration for WPDistillery executed by setup.sh
 #
-# Author: Flurin Dürst » github.com/flurinduerst
+# Author: Flurin Dürst » https://flurinduerst.ch
 # URL: https://github.com/flurinduerst/WPDistillery
 #
-# File version 1.5.1
+# For detailed instructions on this file read the config.yml-documentation at
+# https://github.com/flurinduerst/WPDistillery/blob/master/README_CONFIG.md
+#
+# File Version: 1.5.1
+
 
 # INSTALLATION
 #################################################################
@@ -36,7 +40,6 @@ wpsettings:
   title: Example Title
   description: Example Description
   permalink_structure: /%postname%/
-  # default image sizes
   thumbnail_width: 150
   thumbnail_height: 150
   medium_width: 300
