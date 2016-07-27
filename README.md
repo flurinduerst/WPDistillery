@@ -1,6 +1,6 @@
 ![Screenshot](http://files.flurinduerst.ch/wpdistillery/wpdistillery_logo.png)
 
-**Version:** 1.7
+**Version:** 1.7.1
 
 **Update Note:** Version 1.7 brings lots of new settings. Check out the [configuration file documentation](README_CONFIG.md).
 
@@ -58,7 +58,7 @@ then `exit` and `vagrant ssh` and you're good to go. (This is a ScotchBox issue 
 Feel free to contact me or add issues/pull-requests.
 
 ##### License
-WPSeed is released under the terms of the GNU General Public License
+WPSeed is released under the terms of the (GNU General Public License, Version 3)[https://www.gnu.org/licenses/gpl]
 
 ## Like it? Awesome!
 If you find this tool useful, consider supporting WP Distillery or [buying me a beer](https://www.paypal.me/FlurinDuerst/5) respectively [a glass of single malt scotch whiskey](https://www.paypal.me/FlurinDuerst/10) :)

@@ -3,7 +3,7 @@
 # Author: Flurin Dürst » github.com/flurinduerst
 # URL: https://github.com/flurinduerst/WPDistillery
 #
-# File version 1.5
+# File version 1.5.1
 
 # INSTALLATION
 #################################################################
@@ -57,6 +57,8 @@ theme:
   name: WPSeed
   rename: ""
   url: https://github.com/flurinduerst/WPSeed/archive/master.zip
+  # add branch (e.g. "master") or leave empty ("") if theme is not downloaded from a git repository
+  source_branch: "master"
 
 # PLUGINS
 #################################################################
@@ -93,10 +95,10 @@ plugins_inactive:
 
 setup:
   wp: true
-  settings: true
+  settings: false
   theme: true
-  plugins: true
-  cleanup: true
+  plugins: false
+  cleanup: false
     comment: true
     posts: true
     files: true

@@ -71,17 +71,19 @@ wpsettings:
 ```
 
 ## Theme
-Now you can install a (starter-) theme if you want. Simply add the name and download-url of the theme. WP Distillery will then download, unzip and install the theme. If you do not leave `rename` empty. It will also rename the installed theme for you.
+Now you can install a (starter-) theme if you want. Simply add the name and download-url of the theme. WP Distillery will then download, unzip and install the theme. If you do not leave `rename` empty, it will also rename the installed theme folder. If you're installing a theme from a git repository, make sure to add the branch in `source_branch` or leave it empty if not.
 
 ```yaml
 # THEME
 #################################################################
 
-# theme to install choose new name in 'rename' or leave empty
+# theme to install, choose new name in 'rename' or leave empty
 theme:
   name: WPSeed
   rename: ""
   url: https://github.com/flurinduerst/WPSeed/archive/master.zip
+  # add branch (e.g. "master") or leave empty ("") if theme is not downloaded from a git repository
+  source_branch: "master"
 ```
 
 ## Plugins

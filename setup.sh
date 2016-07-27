@@ -120,11 +120,20 @@ if $CONF_setup_theme ; then
   if [ ! -z "$CONF_theme_rename" ]; then
     # rename theme
     printf "${BLU}»»» renaming $CONF_theme_name to $CONF_theme_rename...${NC}\n"
-    mv wp-content/themes/$CONF_theme_name-master wp-content/themes/$CONF_theme_rename
+    # check if git source
+    if [ ! -z "$CONF_theme_source_branch" ]; then
+      mv wp-content/themes/$CONF_theme_name-$CONF_theme_source_branch wp-content/themes/$CONF_theme_rename
+    else
+      mv wp-content/themes/$CONF_theme_name wp-content/themes/$CONF_theme_rename
+    fi
     wp theme activate $CONF_theme_rename
   else
-    mv wp-content/themes/$CONF_theme_name-master wp-content/themes/$CONF_theme_name
+    # check if git source
+    if [ ! -z "$CONF_theme_source_branch" ]; then
+      mv wp-content/themes/$CONF_theme_name-$CONF_theme_source_branch wp-content/themes/$CONF_theme_name
+    else
     wp theme activate $CONF_theme_name
+    fi
   fi
 else
   printf "${BLU}>>> skipping theme installation...${NC}\n"
