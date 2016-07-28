@@ -38,7 +38,7 @@ git clone https://github.com/scotch-io/scotch-box.git && mv scotch-box/public pu
 4. `vagrant up` then `vagrant ssh`
 5. update wp cli `sudo wp cli update --allow-root` see [Known Issues](https://github.com/flurinduerst/WPDistillery#known-issues)
 6. execute setup.sh `cd ../../var/www/ && bash setup.sh`
-
+7. access your project at  http://192.168.33.10/
 
 ## Known Issues
 * Currently Scotch Box comes with `WP-CLI 0.20.3` The WP-CLI released compatibility updates for WordPress 4.4 and now requires Version `0.20.4+`. Please update wp cli on the VM with `sudo wp cli update --allow-root`. See [issue#158](https://github.com/scotch-io/scotch-box/issues/158)
@@ -54,11 +54,11 @@ then `exit` and `vagrant ssh` and you're good to go. (This is a ScotchBox issue 
 * Contact: [flurin@flurinduerst.ch](mailto:flurin@flurinduerst.ch)
 * Twitter: [@flurinduerst](https://twitter.com/flurinduerst)
 
-#### Contribution
+### Contribution
 Feel free to contact me or add issues/pull-requests.
 
-#### License
-WPDistillery is released under the terms of the [GNU General Public License, Version 3](https://www.gnu.org/licenses/gpl)
+### License
+WPDistillery is released under an edited version of the MIT License. Please see [License](LICENSE.md).
 
-## Like it? Awesome!
+### Like it? Awesome!
 If you find this tool useful, consider supporting WP Distillery or [buying me a beer](https://www.paypal.me/FlurinDuerst/5) respectively [a glass of single malt scotch whiskey](https://www.paypal.me/FlurinDuerst/10) :)

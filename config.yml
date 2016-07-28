@@ -17,7 +17,7 @@ wpfolder: public
 
 # language/timezone
 wplocale: en_US
-timezone: America/New_York
+timezone: "America/New_York"
 
 # admin user settings
 admin:
@@ -39,7 +39,7 @@ wpsettings:
   url: wpdistillery.dev
   title: Example Title
   description: Example Description
-  permalink_structure: /%postname%/
+  permalink_structure: "/%postname%/"
   thumbnail_width: 150
   thumbnail_height: 150
   medium_width: 300
@@ -59,9 +59,9 @@ wpsettings:
 theme:
   name: WPSeed
   rename: ""
-  url: https://github.com/flurinduerst/WPSeed/archive/master.zip
-  # add branch (e.g. "master") or leave empty ("") if theme is not downloaded from a git repository
-  source_branch: "master"
+  url: "https://github.com/flurinduerst/WPSeed/archive/master.zip"
+  # add branch (e.g. master) or leave empty ("") if theme is not downloaded from a git repository
+  source_branch: master
 
 # PLUGINS
 #################################################################
