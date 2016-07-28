@@ -1,8 +1,10 @@
+
 # The configuration file in detail
 
 In this section, we will go through the `config.yml` step by step as I will explain the options available.
 
 The configuration file is split into five sections:
+
 * Installation
 * Wordpress
 * Theme
@@ -71,7 +73,7 @@ wpsettings:
 ```
 
 ## Theme
-Now you can install a (starter-) theme if you want. Simply add the name and download-url of the theme. WP Distillery will then download, unzip and install the theme. If you do not leave `rename` empty, it will also rename the installed theme folder. If you're installing a theme from a git repository, make sure to add the branch in `source_branch` or leave it empty if not.
+Now you can install a (starter-) theme if you want. Simply add the name and download-url of the theme. WP Distillery will then download, unzip and install the theme. If you do not leave **`rename`** empty, it will also rename the installed theme folder. If you're installing a theme from a git repository, make sure to add the branch in **`source_branch`** or leave it empty if not.
 
 ```yaml
 # THEME
@@ -81,7 +83,7 @@ Now you can install a (starter-) theme if you want. Simply add the name and down
 theme:
   name: WPSeed
   rename: ""
-  url: https://github.com/flurinduerst/WPSeed/archive/master.zip
+  url: "https://github.com/flurinduerst/WPSeed/archive/master.zip"
   # add branch (e.g. "master") or leave empty ("") if theme is not downloaded from a git repository
   source_branch: "master"
 ```
@@ -129,8 +131,9 @@ plugins_active:
 
 ## WPDistillery Setup
 Maybe you don't want WP Distillery to install a theme? Or you prefer keeping the default posts and files it comes with? Within the setup options at the bottom of the file you can tell WP Distillery which tasks to perform. Simply set those you wan't to skip to `false`.
+
 * **`wp`**: install WordPress core
-* **`settings`**: set custom WordPress settings (Note: the value defined `timezone` is also considered a setting)
+* **`settings`**: set custom WordPress settings (Note: the value defined **`timezone`** is also considered a setting)
 * **`theme`**: install and activate the theme defined above
 * **`plugins`**: install the plugins listed
 * **`cleanup`**: delete WordPress defaults as followed
@@ -138,6 +141,7 @@ Maybe you don't want WP Distillery to install a theme? Or you prefer keeping the
   * **`posts`**: the default post
   * **`files`**: `readme.html`, `license.txt`
   * **`themes`**: the twentyfourteen, twentyfifteen and twentysixteen theme.
+
 
 ```yaml
 # WPDISTILLERY SETUP
