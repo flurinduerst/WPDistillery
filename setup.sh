@@ -5,7 +5,7 @@
 # Author: Flurin Dürst » github.com/flurinduerst
 # URL: https://github.com/flurinduerst/WPDistillery
 #
-# File version 1.6
+# File version 1.6.1
 
 # ERROR Handler
 # ask user to continue on error
@@ -88,6 +88,7 @@ if $CONF_setup_settings ; then
   wp option update timezone_string $CONF_timezone
   printf "» permalink structure:\n"
   wp rewrite structure "$CONF_wpsettings_permalink_structure"
+  wp rewrite flush
   printf "» description:\n"
   wp option update blogdescription "$CONF_wpsettings_description"
   printf "» image sizes:\n"

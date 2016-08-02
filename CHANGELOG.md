@@ -1,7 +1,9 @@
 
 # CHANGELOG
 
-# 1.7.1
+## Head (1.7.2)
+* add rewrite flush to make sure permalinks are working correctly
+
 ## 1.7.1
 * fixed a bug that caused an error if a theme was installed that doesn't end with `master.zip`
 
