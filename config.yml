@@ -49,7 +49,7 @@ wpsettings:
   # use page as frontpage
   page_on_front: true
     frontpage_name: Example Front Page
-  # automatic converttion of smilies
+  # automatic conversion of smilies
   convert_smilies: false
 
 # THEME
