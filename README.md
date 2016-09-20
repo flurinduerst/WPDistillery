@@ -37,16 +37,17 @@ To setup a new project running Scotch Box and WordPress simply follow these step
 2. add environment variables and your preferred options into `config.yml` (see [configuration file documentation](README_CONFIG.md) for additional info on `config.yml`)
 3. `vagrant up` then `vagrant ssh`
 4. update wp cli `sudo wp cli update --allow-root` see [Known Issues](https://github.com/flurinduerst/WPDistillery#known-issues)
-5. execute setup.sh `cd ../../var/www/ && bash setup.sh`
+5. execute setup.sh `cd ../../var/www && bash setup.sh`
 6. access your project at  http://192.168.33.10/
 
 If you're using Windows, replace step #5 with the following:
 ```
 sudo apt-get install -y dos2unix
-cd /var/www
+cd ../../var/www
 dos2unix config.yml
 dos2unix install.sh 
 ```
+Thanks to [@rowboat85](https://github.com/rowboat85) and [@ShaneShipston](https://github.com/ShaneShipston) for pointing this out.
 
 ## Known Issues
 * Currently Scotch Box comes with `WP-CLI 0.20.3` The WP-CLI released compatibility updates for WordPress 4.4 and now requires Version `0.20.4+`. Please update wp cli on the VM with `sudo wp cli update --allow-root`. See [issue#158](https://github.com/scotch-io/scotch-box/issues/158)
