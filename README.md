@@ -45,7 +45,7 @@ If you're using Windows, replace step #5 with the following:
 sudo apt-get install -y dos2unix
 cd ../../var/www
 dos2unix config.yml
-dos2unix install.sh 
+dos2unix setup.sh 
 ```
 Thanks to [@rowboat85](https://github.com/rowboat85) and [@ShaneShipston](https://github.com/ShaneShipston) for pointing this out.
 
