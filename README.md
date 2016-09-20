@@ -31,16 +31,22 @@ WP Distillery is designed for [Scotch Box](https://box.scotch.io/). Since `WPDis
 ## Setup
 To setup a new project running Scotch Box and WordPress simply follow these steps:
 
-1. Run the following command inside your project root to install both Scotch Box & WPDistillery:
-```bash
-git clone https://github.com/scotch-io/scotch-box.git && mv scotch-box/public public && mv scotch-box/Vagrantfile Vagrantfile && rm -rf scotch-box && git clone --depth 1 https://github.com/flurinduerst/WPDistillery.git && mv WPDistillery/config.yml config.yml && mv WPDistillery/setup.sh setup.sh && rm -rf WPDistillery
+1. Run the following command inside your project root to install both Scotch Box & WPDistillery: 
 
-```
+  `git clone https://github.com/scotch-io/scotch-box.git && mv scotch-box/public public && mv scotch-box/Vagrantfile Vagrantfile && rm -rf scotch-box && git clone --depth 1 https://github.com/flurinduerst/WPDistillery.git && mv WPDistillery/config.yml config.yml && mv WPDistillery/setup.sh setup.sh && rm -rf WPDistillery` 
 2. add environment variables and your preferred options into `config.yml` (see [configuration file documentation](README_CONFIG.md) for additional info on `config.yml`)
-4. `vagrant up` then `vagrant ssh`
-5. update wp cli `sudo wp cli update --allow-root` see [Known Issues](https://github.com/flurinduerst/WPDistillery#known-issues)
-6. execute setup.sh `cd ../../var/www/ && bash setup.sh`
-7. access your project at  http://192.168.33.10/
+3. `vagrant up` then `vagrant ssh`
+4. update wp cli `sudo wp cli update --allow-root` see [Known Issues](https://github.com/flurinduerst/WPDistillery#known-issues)
+5. execute setup.sh `cd ../../var/www/ && bash setup.sh`
+6. access your project at  http://192.168.33.10/
+
+If you're using Windows, replace step #5 with the following:
+```
+sudo apt-get install -y dos2unix
+cd /var/www
+dos2unix config.yml
+dos2unix install.sh 
+```
 
 ## Known Issues
 * Currently Scotch Box comes with `WP-CLI 0.20.3` The WP-CLI released compatibility updates for WordPress 4.4 and now requires Version `0.20.4+`. Please update wp cli on the VM with `sudo wp cli update --allow-root`. See [issue#158](https://github.com/scotch-io/scotch-box/issues/158)
