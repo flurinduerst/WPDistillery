@@ -15,6 +15,9 @@
 # WordPress folder
 wpfolder: public
 
+# WordPress Version
+wpversion: latest
+
 # language/timezone
 wplocale: en_US
 timezone: "America/New_York"
