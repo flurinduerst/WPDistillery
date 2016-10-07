@@ -13,6 +13,7 @@ The configuration file is split into five sections:
 
 ## Installation
 * In **`wpfolder`** you define the folder containing WordPress. Within the current version of Scotch Box this is `public` by default.
+* In **`wpversion`** you can define what WordPress version to install.
 * With **`wplocale`** you can select what language to download and install WordPress. Use language Codes like `en_US` or `en_GB`.
 * Add your timezone as string to **`timezone`**. See [List of Supported Timezones](http://php.net/manual/en/timezones.php).
 * **`admin`** defines the default admin user. Set your preferred username, password and email.
@@ -24,6 +25,9 @@ The configuration file is split into five sections:
 
 # WordPress folder
 wpfolder: public
+
+# WordPress version
+wpversion: latest
 
 # language/timezone
 wplocale: en_US

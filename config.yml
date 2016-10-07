@@ -6,7 +6,7 @@
 # For detailed instructions on this file read the config.yml-documentation at
 # https://github.com/flurinduerst/WPDistillery/blob/master/README_CONFIG.md
 #
-# File Version: 1.5.1
+# File Version: 1.6.0
 
 
 # INSTALLATION
@@ -15,7 +15,7 @@
 # WordPress folder
 wpfolder: public
 
-# WordPress Version
+# WordPress version
 wpversion: latest
 
 # language/timezone

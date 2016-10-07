@@ -1,7 +1,7 @@
 
 ![Screenshot](http://files.flurinduerst.ch/wpdistillery/wpdistillery_logo.png)
 
-**Version:** 1.7.2
+**Version:** 1.7.3
 
 **Update Note:** Version 1.7 brings lots of new settings. Check out the [configuration file documentation](README_CONFIG.md).
 
@@ -31,9 +31,9 @@ WP Distillery is designed for [Scotch Box](https://box.scotch.io/). Since `WPDis
 ## Setup
 To setup a new project running Scotch Box and WordPress simply follow these steps:
 
-1. Run the following command inside your project root to install both Scotch Box & WPDistillery: 
+1. Run the following command inside your project root to install both Scotch Box & WPDistillery:
 
-  `git clone https://github.com/scotch-io/scotch-box.git && mv scotch-box/public public && mv scotch-box/Vagrantfile Vagrantfile && rm -rf scotch-box && git clone --depth 1 https://github.com/flurinduerst/WPDistillery.git && mv WPDistillery/config.yml config.yml && mv WPDistillery/setup.sh setup.sh && rm -rf WPDistillery` 
+  `git clone https://github.com/scotch-io/scotch-box.git && mv scotch-box/public public && mv scotch-box/Vagrantfile Vagrantfile && rm -rf scotch-box && git clone --depth 1 https://github.com/flurinduerst/WPDistillery.git && mv WPDistillery/config.yml config.yml && mv WPDistillery/setup.sh setup.sh && rm -rf WPDistillery`
 2. add environment variables and your preferred options into `config.yml` (see [configuration file documentation](README_CONFIG.md) for additional info on `config.yml`)
 3. `vagrant up` then `vagrant ssh`
 4. update wp cli `sudo wp cli update --allow-root` see [Known Issues](https://github.com/flurinduerst/WPDistillery#known-issues)
@@ -45,7 +45,7 @@ If you're using Windows, replace step #5 with the following:
 sudo apt-get install -y dos2unix
 cd ../../var/www
 dos2unix config.yml
-dos2unix setup.sh 
+dos2unix setup.sh
 bash setup.sh
 ```
 Thanks to [@rowboat85](https://github.com/rowboat85) and [@ShaneShipston](https://github.com/ShaneShipston) for pointing this out.
