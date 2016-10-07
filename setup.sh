@@ -72,7 +72,7 @@ cd $CONF_wpfolder
 if $CONF_setup_wp ; then
   printf "${BRN}[=== INSTALL WORDPRESS ===]${NC}\n"
   printf "${BLU}»»» downloading WordPress...${NC}\n"
-  wp core download --locale=$CONF_wplocale
+  wp core download --locale=$CONF_wplocale --version=$CONF_wpversion
   printf "${BLU}»»» creating wp-config...${NC}\n"
   wp core config --dbname=$CONF_db_name --dbuser=$CONF_db_user --dbpass=$CONF_db_pass --dbprefix=$CONF_db_prefix --locale=$CONF_wplocale
   printf "${BLU}»»» installing wordpress...${NC}\n"
