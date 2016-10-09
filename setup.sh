@@ -77,6 +77,7 @@ if $CONF_setup_wp ; then
   wp core config --dbname=$CONF_db_name --dbuser=$CONF_db_user --dbpass=$CONF_db_pass --dbprefix=$CONF_db_prefix --locale=$CONF_wplocale
   printf "${BLU}»»» installing wordpress...${NC}\n"
   wp core install --url=$CONF_wpsettings_url --title="$CONF_wpsettings_title" --admin_user=$CONF_admin_user --admin_password=$CONF_admin_password --admin_email=$CONF_admin_email
+  wp user update 1 --first_name=$CONF_admin_first_name --last_name=$CONF_admin_last_name
 else
   printf "${BLU}>>> skipping WordPress installation...${NC}\n"
 fi

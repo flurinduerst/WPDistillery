@@ -27,6 +27,8 @@ admin:
   user: admin
   password: admin
   email: mail@domain.tld
+  first_name: ""
+  last_name: ""
 
 # scotch box db access
 db:
