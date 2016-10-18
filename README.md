@@ -1,7 +1,7 @@
 
 ![Screenshot](http://files.flurinduerst.ch/wpdistillery/wpdistillery_logo.png)
 
-**Version:** 1.7.3
+**Version:** 1.7.4
 
 **Update Note:** Version 1.7 brings lots of new settings. Check out the [configuration file documentation](README_CONFIG.md).
 

@@ -1,10 +1,11 @@
 
 # CHANGELOG
 
-## Head (1.7.3) | 07.10.2016
+## Head (1.7.4) | 18.10.2016
 * add option to define WordPress Version
 * documentation updates
 * add rewrite flush to make sure permalinks are working correctly
+* add firstname/lastname to default user
 
 Contributors: @flurinduerst, @ShaneShipston
 
