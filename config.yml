@@ -6,7 +6,7 @@
 # For detailed instructions on this file read the config.yml-documentation at
 # https://github.com/flurinduerst/WPDistillery/blob/master/README_CONFIG.md
 #
-# File Version: 1.6.2
+# File Version: 1.6.3
 
 
 # INSTALLATION
@@ -65,8 +65,6 @@ theme:
   name: WPSeed
   rename: ""
   url: "https://github.com/flurinduerst/WPSeed/archive/master.zip"
-  # add branch (e.g. master) or leave empty ("") if theme is not downloaded from a git repository
-  source_branch: master
 
 # PLUGINS
 #################################################################

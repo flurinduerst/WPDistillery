@@ -1,7 +1,8 @@
 
 # CHANGELOG
 
-## Head (1.7.4) | 18.10.2016
+## Head (1.7.5) | 18.10.2016
+* fixed a bug that occurred on installing a theme from Github using the current version of WP-CLI (0.25.0)
 * add option to define WordPress Version
 * documentation updates
 * add rewrite flush to make sure permalinks are working correctly

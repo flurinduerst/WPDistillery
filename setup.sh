@@ -5,7 +5,7 @@
 # Author: Flurin Dürst » github.com/flurinduerst
 # URL: https://github.com/flurinduerst/WPDistillery
 #
-# File version 1.6.1
+# File version 1.6.2
 
 # ERROR Handler
 # ask user to continue on error
@@ -122,20 +122,10 @@ if $CONF_setup_theme ; then
   if [ ! -z "$CONF_theme_rename" ]; then
     # rename theme
     printf "${BLU}»»» renaming $CONF_theme_name to $CONF_theme_rename...${NC}\n"
-    # check if git source
-    if [ ! -z "$CONF_theme_source_branch" ]; then
-      mv wp-content/themes/$CONF_theme_name-$CONF_theme_source_branch wp-content/themes/$CONF_theme_rename
-    else
-      mv wp-content/themes/$CONF_theme_name wp-content/themes/$CONF_theme_rename
-    fi
+    mv wp-content/themes/$CONF_theme_name wp-content/themes/$CONF_theme_rename
     wp theme activate $CONF_theme_rename
   else
-    # check if git source
-    if [ ! -z "$CONF_theme_source_branch" ]; then
-      mv wp-content/themes/$CONF_theme_name-$CONF_theme_source_branch wp-content/themes/$CONF_theme_name
-    else
     wp theme activate $CONF_theme_name
-    fi
   fi
 else
   printf "${BLU}>>> skipping theme installation...${NC}\n"
