@@ -1,7 +1,8 @@
 
 # CHANGELOG
 
-## Head (1.7.5) | 18.10.2016
+## Head (1.7.6) | 15.11.2016
+* fixed a bug that occurred when sending the admin email after core installation
 * fixed a bug that occurred on installing a theme from Github using the current version of WP-CLI (0.25.0)
 * add option to define WordPress Version
 * documentation updates
