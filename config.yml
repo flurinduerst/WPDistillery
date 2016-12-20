@@ -6,7 +6,7 @@
 # For detailed instructions on this file read the config.yml-documentation at
 # https://github.com/flurinduerst/WPDistillery/blob/master/README_CONFIG.md
 #
-# File Version: 1.6.3
+# File Version: 1.6.4
 
 
 # INSTALLATION
@@ -78,7 +78,6 @@ plugins_active:
   - regenerate-thumbnails
   - simple-page-ordering
   - user-switching
-  - google-sitemap-generator
 
 # plugins to install
 plugins_inactive:

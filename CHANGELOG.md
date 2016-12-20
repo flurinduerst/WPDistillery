@@ -1,13 +1,15 @@
 
 # CHANGELOG
 
-## Head (1.7.6) | 15.11.2016
+## 1.8.0 | 20.12.2016
 * fixed a bug that occurred when sending the admin email after core installation
 * fixed a bug that occurred on installing a theme from Github using the current version of WP-CLI (0.25.0)
-* add option to define WordPress Version
+* added an option to define WordPress Version
 * documentation updates
-* add rewrite flush to make sure permalinks are working correctly
-* add firstname/lastname to default user
+* added rewrite flush to make sure permalinks are working correctly
+* added firstname/lastname to default user
+* removed google-sitemap-generator from default plugins (Yoast covers this aswell)
+* added note about wpdistillery.org
 
 Contributors: @flurinduerst, @ShaneShipston
 

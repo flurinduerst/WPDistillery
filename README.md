@@ -1,9 +1,11 @@
 
 ![Screenshot](http://files.flurinduerst.ch/wpdistillery/wpdistillery_logo.png)
 
-**Version:** 1.7.6
+**Version:** 1.8.0
 
 **Update Note:** Version 1.7 brings lots of new settings. Check out the [configuration file documentation](README_CONFIG.md).
+
+For additional information, visit the [Official WPDistillery Website](https://wpdistillery.org). The Documentation at wpdistillery.org is synced with the Github repository files.
 
 ## What/How/Why
 WP Distillery does all the work for you when setting up a new WordPress project with [Scotch Box](https://box.scotch.io/). Simply add your preferred theme, plugins, options etc. into `config.yml` and your good to go. With WPDistillery it won't take you no longer than 5 minutes until you can start working on your new WordPress project.
@@ -52,13 +54,7 @@ bash setup.sh
 Thanks to [@rowboat85](https://github.com/rowboat85) and [@ShaneShipston](https://github.com/ShaneShipston) for pointing this out.
 
 ## Known Issues
-* Currently Scotch Box comes with `WP-CLI 0.20.3` The WP-CLI released compatibility updates for WordPress 4.4 and now requires Version `0.20.4+`. Please update wp cli on the VM with `sudo wp cli update --allow-root`. See [issue#158](https://github.com/scotch-io/scotch-box/issues/158)
-* When using Wordmove (install it with `gem install wordmove` on the VM) you have to complete the locale settings by adding them to `.bashrc`:
-```
-echo "export LANGUAGE=en_US.UTF-8">>~/.bashrc
-echo "export LC_ALL=en_US.UTF-8 ">>~/.bashrc
-```
-then `exit` and `vagrant ssh` and you're good to go. (This is a ScotchBox issue but I wanted to clarify this for everyone using Wordmove.)
+* Currently Scotch Box comes with `WP-CLI 0.20.3` Since WordPress 4.4 Version `0.20.4+` is required. Please update wp cli on the VM with `sudo wp cli update --allow-root`. See [issue#158](https://github.com/scotch-io/scotch-box/issues/158)
 
 ## About
 * Author: Flurin Dürst
