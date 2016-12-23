@@ -5,12 +5,12 @@
 
 
 Todo:
-[x] Move WPDistillery to /wpdistillery
-[x] Add custom Vagrantfile to automate setup within vagrant up and add requirements/updates
-[x] Add functionality to auto update on vagrant up
-[ ] hostmanager
-[ ] NFS stuff
-[ ] complete Readme where incomplete parts are marked with *****
+* [x] Move WPDistillery to /wpdistillery
+* [x] Add custom Vagrantfile to automate setup within vagrant up and add requirements/updates
+* [x] Add functionality to auto update on vagrant up
+* [ ] hostmanager
+* [ ] NFS stuff
+* [ ] complete Readme where incomplete parts are marked with *****
 
 **Version:** 2.0.0
 
