@@ -51,9 +51,11 @@ WP Distillery is designed for [Scotch Box](https://box.scotch.io/). Since `WPDis
 To setup a new project running Scotch Box and WordPress simply follow these steps:
 
 1. Run the following command inside your project root to install both Scotch Box & WPDistillery:
+
   ```
   git clone https://github.com/scotch-io/scotch-box.git && mv scotch-box/public public && rm -rf scotch-box && git clone -b 2.0beta https://github.com/flurinduerst/WPDistillery.git mv WPDistillery/Vagrantfile Vagrantfile && mv WPDistillery/wpdistillery wpdistillery2 && rm -rf WPDistillery && mv wpdistillery2 wpdistillery
   ```
+
 2. customize `wpdistillery/config.yml` (see [configuration file documentation](README_CONFIG.md) for additional info)
 3. ***** add note about domain ******
 4. `vagrant up`
