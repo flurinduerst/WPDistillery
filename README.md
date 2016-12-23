@@ -77,7 +77,13 @@ Thanks to [@rowboat85](https://github.com/rowboat85) and [@ShaneShipston](https:
 * Twitter: [@flurinduerst](https://twitter.com/flurinduerst)
 
 ### Contribution
-Feel free to contact me or add issues/pull-requests.
+* Fork it
+* Create your feature branch
+* Commit your changes
+* Push to the branch
+* Create new Pull Request
+
+Feel free  contact me in any case
 
 ### License
 WPDistillery is released under an edited version of the MIT License. Please see [License](LICENSE.md).
