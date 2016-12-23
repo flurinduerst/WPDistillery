@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
 
     config.vm.box = "scotch/box"
     config.vm.network "private_network", ip: "192.168.33.10"
-    config.vm.hostname = "wpdsrc.dev" # can i read this form config? #
+    config.vm.hostname = "wpdistillery.dev" # can i read this form config? #
     config.vm.synced_folder ".", "/var/www", :mount_options => ["dmode=777", "fmode=666"]
 
     # Windows Support
