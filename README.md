@@ -3,6 +3,7 @@
 ### This is a Beta Testing Branch.
 ### This build is unfinished. Do not use for production.
 
+**Version:** 2.0.0
 
 Todo:
 * [x] Move WPDistillery to /wpdistillery
@@ -11,8 +12,6 @@ Todo:
 * [ ] hostmanager
 * [ ] NFS stuff
 * [ ] complete Readme where incomplete parts are marked with *****
-
-**Version:** 2.0.0
 
 ---------------------------------------------------------------------
 
