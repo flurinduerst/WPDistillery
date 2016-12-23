@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
     # Windows Support
     if Vagrant::Util::Platform.windows?
       config.vm.provision "shell",
-      inline: "echo \"Converting Files For Windows\" && sudo apt-get install -y dos2unix && dos2unix wpdistillery/config.yml && dos2unix wpdistillery/provision.sh && dos2unix wpdistillery/wpdistillery.sh",
+      inline: "echo \"Converting Files For Windows\" && sudo apt-get install -y dos2unix && cd /var/www/ && dos2unix wpdistillery/config.yml && dos2unix wpdistillery/provision.sh && dos2unix wpdistillery/wpdistillery.sh",
       run: "always", privileged: false
     end
 
