@@ -1,3 +1,11 @@
+# v 2.0 BETA
+
+### This is a Beta Testing Branch.
+### This build is unfinished. Do not use for production.
+
+**Version:** 2.0.0
+
+---------------------------------------------------------------------
 
 ![Screenshot](http://files.flurinduerst.ch/wpdistillery/wpdistillery_logo.png)
 
