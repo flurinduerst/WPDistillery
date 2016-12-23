@@ -12,6 +12,13 @@ Vagrant.configure("2") do |config|
     config.vm.hostname = "wpdsrc.dev" # can i read this form config? #
     config.vm.synced_folder ".", "/var/www", :mount_options => ["dmode=777", "fmode=666"]
 
+    # Windows Support
+    if Vagrant::Util::Platform.windows?
+      config.vm.provision "shell",
+      inline: "echo \"Converting Files For Windows\" && sudo apt-get install -y dos2unix && dos2unix wpdistillery/config.yml && dos2unix wpdistillery/provision.sh && dos2unix wpdistillery/wpdistillery.sh",
+      run: "always", privileged: false
+    end
+
     # Run Provisioning (update wp cli, set upload size to 64MB, run WPDistillery)
     # executed within the first `vagrant up` and every `vagrant provision`
     config.vm.provision "shell", path: "wpdistillery/provision.sh"
