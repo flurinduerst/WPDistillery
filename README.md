@@ -3,6 +3,15 @@
 ### This is a Beta Testing Branch.
 ### This build is unfinished. Do not use for production.
 
+
+Todo:
+[x] Move WPDistillery to /wpdistillery
+[x] Add custom Vagrantfile to automate setup within vagrant up and add requirements/updates
+[x] Add functionality to auto update on vagrant up
+[ ] hostmanager
+[ ] NFS stuff
+[ ] complete Readme where incomplete parts are marked with *****
+
 **Version:** 2.0.0
 
 ---------------------------------------------------------------------
@@ -16,6 +25,7 @@
 For additional information, visit the [Official WPDistillery Website](https://wpdistillery.org). The Documentation at wpdistillery.org is synced with the Github repository files.
 
 ## What/How/Why
+***** add note about "vagrant up will do everything since 2.0"*****
 WP Distillery does all the work for you when setting up a new WordPress project with [Scotch Box](https://box.scotch.io/). Simply add your preferred theme, plugins, options etc. into `config.yml` and your good to go. With WPDistillery it won't take you no longer than 5 minutes until you can start working on your new WordPress project.
 Executing setup.sh then will
 - download/install/configure WordPress
@@ -42,23 +52,23 @@ WP Distillery is designed for [Scotch Box](https://box.scotch.io/). Since `WPDis
 To setup a new project running Scotch Box and WordPress simply follow these steps:
 
 1. Run the following command inside your project root to install both Scotch Box & WPDistillery:
+  `git clone https://github.com/scotch-io/scotch-box.git &&
+   mv scotch-box/public public &&
+   rm -rf scotch-box &&
+   git clone -b 2.0beta https://github.com/flurinduerst/WPDistillery.git
+   mv WPDistillery/Vagrantfile Vagrantfile &&
+   mv WPDistillery/wpdistillery wpdistillery2 &&
+   rm -rf WPDistillery &&
+   mv wpdistillery2 wpdistillery`
+2. add environment variables and your preferred options into `wpdistillery/config.yml` (see [configuration file documentation](README_CONFIG.md) for additional info on `config.yml`)
+3. ***** add note about domain ******
+4. `vagrant up` (this will initialize your vagrant box, add requirements install WordPress )
+5. Done! You can now access your project at  http://192.168.33.10/ or the domain defined in step #3.
 
-  `git clone https://github.com/scotch-io/scotch-box.git && mv scotch-box/public public && mv scotch-box/Vagrantfile Vagrantfile && rm -rf scotch-box && git clone --depth 1 https://github.com/flurinduerst/WPDistillery.git && mv WPDistillery/config.yml config.yml && mv WPDistillery/setup.sh setup.sh && rm -rf WPDistillery`
-2. add environment variables and your preferred options into `config.yml` (see [configuration file documentation](README_CONFIG.md) for additional info on `config.yml`)
-3. `vagrant up`
-4. `vagrant ssh`
-5. update wp cli `sudo wp cli update --allow-root` see [Known Issues](https://github.com/flurinduerst/WPDistillery#known-issues)
-6. execute setup.sh `cd ../../var/www && bash setup.sh`
-7. access your project at  http://192.168.33.10/
+***** add note about windows support in Vagrantfile *****
 
-If you're using Windows, replace step #6 with the following:
-```
-sudo apt-get install -y dos2unix
-cd ../../var/www
-dos2unix config.yml
-dos2unix setup.sh
-bash setup.sh
-```
+***** add note about functionality of vagrant up and vagrant provision *****
+
 Thanks to [@rowboat85](https://github.com/rowboat85) and [@ShaneShipston](https://github.com/ShaneShipston) for pointing this out.
 
 ## Known Issues
