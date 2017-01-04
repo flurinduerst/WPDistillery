@@ -19,14 +19,11 @@ Vagrant.configure("2") do |config|
       run: "always", privileged: false
     end
 
-    # Run Provisioning (update wp cli, set upload size to 64MB, run WPDistillery)
-    # executed within the first `vagrant up` and every `vagrant provision`
+    # Run Provisioning – executed within the first `vagrant up` and every `vagrant provision`
     config.vm.provision "shell", path: "wpdistillery/provision.sh"
 
-    # Update WordPress and all Plugins on vagrant up
-    # executed within every `vagrant up`
-    config.vm.provision "shell",
-    inline: "echo \"== Update WordPress & Plugins ==\" && cd /var/www/public && wp core update && wp plugin update --all", run: "always", privileged: false
+    # Update WordPress and all Plugins on vagrant up – executed within every `vagrant up`
+    # config.vm.provision "shell", inline: "echo \"== Update WordPress & Plugins ==\" && cd /var/www/public && wp core update && wp plugin update --all", run: "always", privileged: false
 
     # Enable NFS
     # config.vm.synced_folder ".", "/var/www", :nfs => { :mount_options => ["dmode=777","fmode=666"] }
