@@ -1,14 +1,17 @@
 
 # CHANGELOG
 
-## 2.0.0 | xx.xx.xxxx
+## 2.0.0 | xx.xx.2017
 * simplified setup process to `vagrant up`
+* restructured file and folder structure (moved all files into a wpdistillery folder)
 * added custom Vagrantfile
-* restructured file and folder structure (moved all files into wpdistillery folder)
-* added auto-update function for WordPress Core and Plugins
+* added auto-update for WP-CLI
+* added auto-update option for WordPress Core and Plugins
 * added Windows Support
 
 Special thanks to [@ShaneShipston](https://github.com/ShaneShipston) for his feature-suggestions and beta testing.
+
+Contributors: @flurinduerst, @ShaneShipston
 
 ## 1.8.0 | 20.12.2016
 * fixed a bug that occurred when sending the admin email after core installation
@@ -20,7 +23,7 @@ Special thanks to [@ShaneShipston](https://github.com/ShaneShipston) for his fea
 * removed google-sitemap-generator from default plugins (Yoast covers this aswell)
 * added note about wpdistillery.org
 
-Contributors: @flurinduerst, @ShaneShipston
+Contributors: @flurinduerst, @ShaneShipston, @drawcard
 
 ## 1.7.1 | 02.08.2016
 * fixed a bug that caused an error if a theme was installed that doesn't end with `master.zip`
