@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 #
-# WP SETUP FILE
+# WPDistillery setup file
 #
-# Author: Flurin Dürst » github.com/flurinduerst
-# URL: https://github.com/flurinduerst/WPDistillery
+# Author: Flurin Dürst
+# URL: https://wpdistillery.org
 #
-# File version 1.6.3
+# File version 1.7.0
 
 # ERROR Handler
 # ask user to continue on error
@@ -57,8 +57,11 @@ NC='\033[0m' # no color
 
 printf "${BRN}========== WPDISTILLERY START ==========${NC}\n\n"
 
+# MOVE TO SYNCED DIRECTORY
+cd ..
+
 # READ CONFIG
-eval $(parse_yaml config.yml "CONF_")
+eval $(parse_yaml wpdistillery/config.yml "CONF_")
 
 # CHECK WP FOLDER
 if [ ! -d "$CONF_wpfolder" ]; then
@@ -152,9 +155,9 @@ if $CONF_setup_cleanup ; then
   fi
   if $CONF_setup_cleanup_themes ; then
     printf "${BLU}»»» removing default themes...${NC}\n"
-    wp theme delete twentyfourteen
     wp theme delete twentyfifteen
     wp theme delete twentysixteen
+    wp theme delete twentyseventeen
   fi
 else
   printf "${BLU}>>> skipping Cleanup...${NC}\n"
