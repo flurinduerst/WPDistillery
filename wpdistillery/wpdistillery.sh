@@ -2,9 +2,8 @@
 #
 # WPDistillery setup file
 #
-# Author: Flurin Dürst » github.com/flurinduerst
-# URL: https://github.com/flurinduerst/WPDistillery
-# Note: was setup.sh until WPDistillery 2.0.0
+# Author: Flurin Dürst
+# URL: https://wpdistillery.org
 #
 # File version 1.7.0
 

@@ -1,17 +1,18 @@
 
 # CHANGELOG
 
-## 2.0.0 | xx.xx.2017
+## 2.0.0 | 15.01.2017
 * simplified setup process to `vagrant up`
 * restructured file and folder structure (moved all files into a wpdistillery folder)
 * added custom Vagrantfile
 * added auto-update for WP-CLI
 * added auto-update option for WordPress Core and Plugins
+* fixed a few minor bugs
 * added Windows Support
 
-Special thanks to [@ShaneShipston](https://github.com/ShaneShipston) for his feature-suggestions and beta testing.
+Special thanks to [@ShaneShipston](https://github.com/ShaneShipston) for his feature-suggestions and everyone involved in beta testing ([@MarcWieland95](https://github.com/marcwieland95), Anthony Chapman)
 
-Contributors: @flurinduerst, @ShaneShipston
+Contributors: [@FlurinDuerst](https://github.com/flurinduerst), [@ShaneShipston](https://github.com/ShaneShipston)
 
 ## 1.8.0 | 20.12.2016
 * fixed a bug that occurred when sending the admin email after core installation
