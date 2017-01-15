@@ -1,6 +1,6 @@
 ![Screenshot](http://files.flurinduerst.ch/wpdistillery/wpdistillery_logo.png)
 
-**Version 2.0** (15.91.2017)
+**Version 2.0** (15.01.2017)
 
 With the 2.0 update, the setup process is now much easier. All you need to do after customizing your config file is `vagrant up`. That's it! With that single command, WPDistillery will now ssh to the VM, update WP-CLI, install and configure everything. It also comes with an optional auto-update function and integrated support for Windows. Check out the [Changelog](CHANGELOG.md) for a complete list of changes.
 
