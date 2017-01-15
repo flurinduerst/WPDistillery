@@ -28,7 +28,7 @@ See this [Screenshot](http://files.flurinduerst.ch/wpdistillery/setup_screenshot
 - [ScotchBox](https://box.scotch.io) (using [Vagrant](https://vagrantup.com) & [Virtualbox](https://virtualbox.org))
 - [Vagrant Hostsupdater](https://github.com/cogitatio/vagrant-hostsupdater) (`vagrant plugin install vagrant-hostsupdater`)
 
-## Setup˚
+## Setup
 To setup a new project running Scotch Box and WordPress, simply follow these steps:
 
 1. Run the following command inside your project root to clone both Scotch Box and WPDistillery and move them to the right place:
