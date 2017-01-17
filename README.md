@@ -25,7 +25,7 @@ See this [Screenshot](http://files.flurinduerst.ch/wpdistillery/setup_screenshot
 
 ## Demo
 
-[![WPDistillery Setup Video](http://files.flurinduerst.ch/wpdistillery/demovideo_thumb.png)](https://youtu.be/y1GtIiODsxM)
+[![WPDistillery Setup Video](http://files.flurinduerst.ch/wpdistillery/demovideo_thumb2.png)](https://youtu.be/y1GtIiODsxM)
 
 
 ## Dependencies
