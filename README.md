@@ -23,6 +23,10 @@ Now you can use your `config.yml` as a template for every new project and save a
 
 See this [Screenshot](http://files.flurinduerst.ch/wpdistillery/setup_screenshot.jpg) (German) for a preview of how the setup will look like.
 
+## Demo
+
+[![WPDistillery Setup Video](http://files.flurinduerst.ch/wpdistillery/demovideo_thumb.png)](https://youtu.be/y1GtIiODsxM)
+
 
 ## Dependencies
 - [ScotchBox](https://box.scotch.io) (using [Vagrant](https://vagrantup.com) & [Virtualbox](https://virtualbox.org))
