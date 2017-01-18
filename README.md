@@ -7,7 +7,7 @@ With the 2.0 update, the setup process is now much easier. All you need to do af
 For additional information, visit the [Official WPDistillery Website](https://wpdistillery.org). The Documentation on wpdistillery.org is synced with the Github repository files.
 
 ## What is WPDistillery?
-WP Distillery does all the work for you when setting up a new WordPress project with [Scotch Box](https://box.scotch.io/). Simply add your preferred theme, plugins, options etc. into `config.yml` and your good to go. With WPDistillery it won't take you no longer than 5 minutes until you can start working on your new WordPress project.
+WP Distillery does all the work for you when setting up a new WordPress project with [Scotch Box](https://box.scotch.io/). Simply add your preferred theme, plugins, options etc. into `config.yml` and you're good to go. With WPDistillery it won't take longer than 5 minutes until you can start working on your new WordPress project.
 One simple command will
 - install Scotch Box
 - install/update requirements on the local webserver
@@ -21,11 +21,11 @@ You're able to adjust which of the above tasks will be executed. Simply set the 
 
 Now you can use your `config.yml` as a template for every new project and save a lot of time clicking, dragging, editing and configuring.
 
-See this [Screenshot](http://files.flurinduerst.ch/wpdistillery/setup_screenshot.jpg) (German) for a preview of how the setup will look like.
-
 ## Demo
 
 [![WPDistillery Setup Video](http://files.flurinduerst.ch/wpdistillery/demovideo_thumb2.png)](https://youtu.be/y1GtIiODsxM)
+
+[Screenshot](http://files.flurinduerst.ch/wpdistillery/setup_screenshot.jpg) (German UI)
 
 
 ## Dependencies
