@@ -3,7 +3,7 @@
 All code in this repository, unless otherwise specified, is hereby licensed under the MIT Public License:
 =========================================================================================================
 
-Copyright (C) 2016 Flurin Dürst (https://flurinduerst.ch)
+Copyright © 2016-2017 Flurin Dürst (https://flurinduerst.ch)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
