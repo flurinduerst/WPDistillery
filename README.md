@@ -8,7 +8,7 @@ For additional information, visit the [Official WPDistillery Website](https://wp
 
 ## What is WPDistillery?
 WP Distillery does all the work for you when setting up a new WordPress project with [Scotch Box](https://box.scotch.io/). Simply add your preferred theme, plugins, options etc. into `config.yml` and you're good to go. With WPDistillery it won't take longer than 5 minutes until you can start working on your new WordPress project.
-One simple command will
+One simple command will:
 - install Scotch Box
 - install/update requirements on the local webserver
 - download/install/configure WordPress
@@ -79,6 +79,7 @@ Using Windows? No Problem! WPDistillery will detect if you're using Windows and 
 Feel free to contact me if you have questions or need any advice.
 
 ### License
-WPDistillery is released under an edited version of the MIT License. Please see [License](LICENSE.md).
+WPDistillery is released under an modified version of the MIT License. Please see [License](LICENSE.md).
+Note: The "About" section in `README.md` shall not be edited or deleted without permission. Thank you.
 
-If you find WPDistillery useful, consider supporting WP Distillery or [buying me a beer](https://www.paypal.me/FlurinDuerst/5) respectively [a glass of single malt scotch whiskey](https://www.paypal.me/FlurinDuerst/10) :)
+If you find WPDistillery useful, consider [supporting](https://www.paypal.me/FlurinDuerst/10).
