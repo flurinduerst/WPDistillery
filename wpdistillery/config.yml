@@ -53,7 +53,8 @@ wpsettings:
   large_height: 1024
   # use page as frontpage
   page_on_front: true
-    frontpage_name: Example Front Page
+  # define frontpage name (requires `page_on_front: true`)
+  frontpage_name: Example Front Page
   # automatic conversion of smilies
   convert_smilies: false
 
@@ -104,7 +105,8 @@ setup:
   theme: true
   plugins: true
   cleanup: true
-    comment: true
-    posts: true
-    files: true
-    themes: true
+  # adjust what data you want to be deleted within the cleanup (required `cleanup: true`)
+  comment: true
+  posts: true
+  files: true
+  themes: true
