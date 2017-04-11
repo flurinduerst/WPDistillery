@@ -1,6 +1,9 @@
 
 # CHANGELOG
 
+## HEAD (2.0.1)
+* fix yaml syntax errors (thanks to @XedinUnknown)
+
 ## 2.0.0 | 15.01.2017
 * simplified setup process to `vagrant up`
 * restructured file and folder structure (moved all files into a wpdistillery folder)
