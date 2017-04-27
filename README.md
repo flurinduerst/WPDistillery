@@ -1,6 +1,6 @@
 ![Screenshot](http://files.flurinduerst.ch/wpdistillery/wpdistillery_logo.png)
 
-**Version 2.0.1** (15.01.2017)
+**Version 2.0.2** (27.04.2017)
 
 With the 2.0 update, the setup process is now much easier. All you need to do after customizing your config file is `vagrant up`. That's it! With that single command, WPDistillery will now ssh to the VM, update WP-CLI, install and configure everything. It also comes with an optional auto-update function and integrated support for Windows. Check out the [Changelog](CHANGELOG.md) for a complete list of changes.
 
@@ -79,7 +79,8 @@ Using Windows? No Problem! WPDistillery will detect if you're using Windows and 
 Feel free to contact me if you have questions or need any advice.
 
 ### License
-WPDistillery is released under an modified version of the MIT License. Please see [License](LICENSE.md).
-Note: The "About" section in `README.md` shall not be edited or deleted without permission. Thank you.
+WPDistillery is released under the MIT Public License.
+
+Note: The "About" section in `README.md` and the author (`@author`) notice in the file-headers shall not be edited or deleted without permission. For Details see [License](LICENSE.md). Thank you.
 
 If you find WPDistillery useful, consider [supporting](https://www.paypal.me/FlurinDuerst/10).

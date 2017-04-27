@@ -1,8 +1,10 @@
 
 # CHANGELOG
 
-## HEAD (2.0.1)
+## HEAD (2.0.2)
 * fix yaml syntax errors (thanks to @XedinUnknown)
+* add license note
+
 
 ## 2.0.0 | 15.01.2017
 * simplified setup process to `vagrant up`
