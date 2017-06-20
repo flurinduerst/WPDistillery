@@ -1,10 +1,11 @@
 
 # CHANGELOG
 
-## HEAD (2.0.3)
+## HEAD (2.0.4)
 * update default plugin list: remove yoast, add the-seo-framework (see https://roots.io/weve-migrated-from-yoast-seo/)
-* fix yaml syntax errors (thanks to @XedinUnknown)
 * add license note
+* fix yaml syntax errors (thanks to @XedinUnknown)
+* fix front_page_name variable in setup
 
 
 ## 2.0.0 | 15.01.2017
