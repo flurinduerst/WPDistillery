@@ -35,12 +35,7 @@ Now you can use your `config.yml` as a template for every new project and save a
 ## Setup
 To setup a new project running Scotch Box and WordPress, simply follow these steps:
 
-1. Run the following command inside your project root to clone both Scotch Box and WPDistillery and move them to the right place:
-
-  ```
-  git clone https://github.com/flurinduerst/WPDistillery.git && mv WPDistillery/Vagrantfile Vagrantfile && mv WPDistillery/wpdistillery wpdistillery2 && rm -rf WPDistillery && mv wpdistillery2 wpdistillery
-  ```
-
+1. `git clone https://github.com/flurinduerst/WPDistillery.git my-project`
 2. customize `wpdistillery/config.yml` (see [configuration file documentation](README_CONFIG.md))
 3. in `Vagrantfile` add your local domain at `config.vm.hostname` (This should be the same as `wpsettings:url:` in `config.yml`)
 4. Run `vagrant up` inside your project root
