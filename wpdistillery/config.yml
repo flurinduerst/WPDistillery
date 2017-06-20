@@ -90,7 +90,8 @@ plugins_inactive:
   - adminimize
   - admin-menu-editor
   - admin-menu-reorder
-  - wordpress-seo
+  # seo
+  - autodescription
   #security/backup
   - wp-security-audit-log
   - backwpup
