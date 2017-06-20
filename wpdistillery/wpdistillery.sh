@@ -108,8 +108,8 @@ if $CONF_setup_settings ; then
   if $CONF_wpsettings_page_on_front ; then
     printf "» front page:\n"
     # create and set frontpage
-    wp post create --post_type=page --post_title="$CONF_wpsettings_page_on_front_frontpage_name" --post_content='Front Page created by WPDistillery' --post_status=publish
-    wp option update page_on_front $(wp post list --post_type=page --post_status=publish --posts_per_page=1 --pagename="$CONF_wpsettings_page_on_front_frontpage_name" --field=ID --format=ids)
+    wp post create --post_type=page --post_title="$CONF_wpsettings_frontpage_name" --post_content='Front Page created by WPDistillery' --post_status=publish
+    wp option update page_on_front $(wp post list --post_type=page --post_status=publish --posts_per_page=1 --pagename="$CONF_wpsettings_frontpage_name" --field=ID --format=ids)
     wp option update show_on_front 'page'
   fi
 else
