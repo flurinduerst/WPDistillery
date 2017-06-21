@@ -5,17 +5,17 @@
 # Author: Flurin Dürst
 # URL: https://wpdistillery.org
 #
-# File version 1.0.0
+# File version 1.1.0
 
 # update WP-CLI
-echo "== Update WP CLI =="
-sudo wp cli update --yes --allow-root
-
-# set upload size to 64MB
-echo "== Update Max Filesize =="
-sudo sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 64M/g' /etc/php5/apache2/php.ini
-sudo sed -i 's/post_max_size = 8M/post_max_size = 64M/g' /etc/php5/apache2/php.ini
-sudo service apache2 restart
+# since Scotch Box 3.0 (php7), we have to reinstall WP-CLI
+echo "== Update WP CLI (re-install) =="
+cd ../../../
+sudo rm usr/local/bin/wp
+sudo curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+sudo chmod +x wp-cli.phar
+sudo mv wp-cli.phar /usr/local/bin/wp
+echo "WP-CLI Update successful"
 
 # run WPDistillery
 echo "== Run WPDistillery =="
