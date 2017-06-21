@@ -1,5 +1,7 @@
 ![Screenshot](http://files.flurinduerst.ch/wpdistillery/wpdistillery_logo.png)
 
+Note: Right now, there's a bug in Scotch Box 3.0 were you can't update WP-CLI. See https://github.com/flurinduerst/WPDistillery/issues/53. I recommend not updating Scotch Box until this issue has beed resolved. Using Scotch Box 2.5 works fine with WPDistillery.
+
 **Version 2.0.4** (20.06.2017)
 
 With the 2.0 update, the setup process is now much easier. All you need to do after customizing your config file is `vagrant up`. That's it! With that single command, WPDistillery will now ssh to the VM, update WP-CLI, install and configure everything. It also comes with an optional auto-update function and integrated support for Windows. Check out the [Changelog](CHANGELOG.md) for a complete list of changes.
