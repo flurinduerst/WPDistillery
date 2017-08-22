@@ -1,6 +1,9 @@
 
 # CHANGELOG
 
+## HEAD | 2.1.1 | 21.06.2017
+* add `--hard` to rewrite flush to make sure .htaccess file is generated (Thanks to @XedinUnknown)
+
 ## 2.1.0 | 21.06.2017
 * update setup for Scotch Box 3.0 (re-install WP-CLI for php7)
 * update default plugin list: remove yoast, add the-seo-framework (see https://roots.io/weve-migrated-from-yoast-seo/)

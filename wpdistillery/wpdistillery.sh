@@ -5,7 +5,7 @@
 # Author: Flurin Dürst
 # URL: https://wpdistillery.org
 #
-# File version 1.7.0
+# File version 1.7.1
 
 # ERROR Handler
 # ask user to continue on error
@@ -92,7 +92,7 @@ if $CONF_setup_settings ; then
   wp option update timezone_string $CONF_timezone
   printf "» permalink structure:\n"
   wp rewrite structure "$CONF_wpsettings_permalink_structure"
-  wp rewrite flush
+  wp rewrite flush --hard
   printf "» description:\n"
   wp option update blogdescription "$CONF_wpsettings_description"
   printf "» image sizes:\n"
