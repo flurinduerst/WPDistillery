@@ -1,8 +1,11 @@
 
 # CHANGELOG
 
-## HEAD | 2.1.1 | 21.06.2017
+## 2.2.0 | 31.10.2017
+* change default local-domain to `.local` as `.dev` is an official gTLD now
+* add ssh credentials to `Vagrantfile`
 * add `--hard` to rewrite flush to make sure .htaccess file is generated (Thanks to @XedinUnknown)
+* Fix Typo
 
 ## 2.1.0 | 21.06.2017
 * update setup for Scotch Box 3.0 (re-install WP-CLI for php7)

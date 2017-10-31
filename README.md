@@ -1,6 +1,6 @@
 ![Screenshot](http://files.flurinduerst.ch/wpdistillery/wpdistillery_logo.png)
 
-**Version 2.1.1** (22.08.2017)
+**Version 2.2.0** (31.10.2017)
 
 Since V2.1.0 WPDistillery is fully compatible with Scotch Box 3.0
 
@@ -39,7 +39,7 @@ To setup a new project running Scotch Box and WordPress, simply follow these ste
 3. in `Vagrantfile`, add your local URL at `config.vm.hostname` (This should be the same as `wpsettings:url:` in `config.yml`)
 4. Run `vagrant up` inside your project root
 
-Done! You can now access your project at the local URL defined in step 3. (or at http://192.168.33.10/)
+Done! You can now access your project at the local URL (for example `yoursite.local`) defined in step 3. (or at http://192.168.33.10/)
 
 ## Additional Information
 

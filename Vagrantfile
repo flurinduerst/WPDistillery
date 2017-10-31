@@ -3,16 +3,18 @@
 #
 # WPDistillery Vagrantfile using Scotch Box
 #
-# File Version: 1.0
+# File Version: 1.1
 
 Vagrant.configure("2") do |config|
 
+    config.ssh.username = "vagrant"
+    config.ssh.password = "vagrant"
     config.vm.box = "scotch/box"
     config.vm.network "private_network", ip: "192.168.33.10"
-    config.vm.hostname = "wpdistillery.dev"
+    config.vm.hostname = "wpdistillery.local"
     config.vm.synced_folder ".", "/var/www", :mount_options => ["dmode=777", "fmode=666"]
 
-    # Windows Support
+    # WPDistillery Windows Support
     if Vagrant::Util::Platform.windows?
       config.vm.provision "shell",
       inline: "echo \"Converting Files for Windows\" && sudo apt-get install -y dos2unix && cd /var/www/ && dos2unix wpdistillery/config.yml && dos2unix wpdistillery/provision.sh && dos2unix wpdistillery/wpdistillery.sh",
