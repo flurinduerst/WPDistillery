@@ -58,7 +58,7 @@ db:
 #################################################################
 
 wpsettings:
-  url: wpdistillery.local
+  url: wpdistillery.vm
   title: Example
   description: Example Description
   permalink_structure: /%postname%/

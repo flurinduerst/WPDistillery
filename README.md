@@ -39,7 +39,7 @@ To setup a new project running Scotch Box and WordPress, simply follow these ste
 3. in `Vagrantfile`, add your local URL at `config.vm.hostname` (This should be the same as `wpsettings:url:` in `config.yml`)
 4. Run `vagrant up` inside your project root
 
-Done! You can now access your project at the local URL (for example `yoursite.local`) defined in step 3. (or at http://192.168.33.10/)
+Done! You can now access your project at the local URL (for example `yoursite.vm`) defined in step 3. (or at http://192.168.33.10/)
 
 ## Additional Information
 

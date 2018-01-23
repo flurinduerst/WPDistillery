@@ -3,7 +3,7 @@
 #
 # WPDistillery Vagrantfile using Scotch Box
 #
-# File Version: 1.1
+# File Version: 1.2.0
 
 Vagrant.configure("2") do |config|
 
@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
     config.ssh.password = "vagrant"
     config.vm.box = "scotch/box"
     config.vm.network "private_network", ip: "192.168.33.10"
-    config.vm.hostname = "wpdistillery.local"
+    config.vm.hostname = "wpdistillery.vm"
     config.vm.synced_folder ".", "/var/www", :mount_options => ["dmode=777", "fmode=666"]
 
     # WPDistillery Windows Support

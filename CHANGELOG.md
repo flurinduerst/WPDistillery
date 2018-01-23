@@ -1,6 +1,10 @@
 
 # CHANGELOG
 
+## HEAD | 2.2.1 | 23.01.2018
+* change default local-domain to `.vm` (for "virtual machine") as `.local` has conflicts when using browsersync
+*
+
 ## 2.2.0 | 31.10.2017
 * change default local-domain to `.local` as `.dev` is an official gTLD now
 * add ssh credentials to `Vagrantfile`
