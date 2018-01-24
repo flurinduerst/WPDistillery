@@ -1,6 +1,6 @@
 ![Screenshot](http://files.flurinduerst.ch/wpdistillery/wpdistillery_logo.png)
 
-**Version 2.2.0** (31.10.2017)
+**Version 2.2.2** (24.01.2017)
 
 Since V2.1.0 WPDistillery is fully compatible with Scotch Box 3.0
 
@@ -42,6 +42,9 @@ To setup a new project running Scotch Box and WordPress, simply follow these ste
 Done! You can now access your project at the local URL (for example `yoursite.vm`) defined in step 3. (or at http://192.168.33.10/)
 
 ## Additional Information
+
+#### WPDistiller with WP-Multisite
+Using this [Pull Request](https://github.com/flurinduerst/WPDistillery/pull/45) you can add WPDistillery capability for your project. We [decided](https://github.com/flurinduerst/WPDistillery/issues/59) to not merge the PR to keep WPDistillery as clean as it is.
 
 #### Auto Update WordPress and Plugins
 If you want to automatically update WordPress and all Plugins on every `vagrant up` you can remove the comment character at line 26 inside the Vagrantfile.
