@@ -43,7 +43,7 @@ Done! You can now access your project at the local URL (for example `yoursite.vm
 
 ## Additional Information
 
-#### WPDistiller with WP-Multisite
+#### WPDistillery with WP-Multisite
 Using this [Pull Request](https://github.com/flurinduerst/WPDistillery/pull/45) you can add WPDistillery capability for your project. We [decided](https://github.com/flurinduerst/WPDistillery/issues/59) to not merge the PR to keep WPDistillery as clean as it is.
 
 #### Auto Update WordPress and Plugins
