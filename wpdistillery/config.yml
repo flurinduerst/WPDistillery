@@ -6,7 +6,7 @@
 # For detailed instructions on this file read the config.yml-documentation at
 # https://wpdistillery.org/documentation/config-yml-documentation/
 #
-# File Version: 1.7.1
+# File Version: 1.8.0
 
 
 # INSTALLATION
@@ -58,14 +58,19 @@ wpsettings:
   # automatic conversion of smilies
   convert_smilies: false
 
-# THEME
+# THEMES
 #################################################################
 
-# theme to install, choose new name in 'rename' or leave empty
-theme:
-  name: WPSeed
-  url: "https://github.com/flurinduerst/WPSeed/archive/master.zip"
+# install a custom theme via url, rename it and remove default themes
+themes:
+  name: twentyseventeen
+  url: "https://downloads.wordpress.org/theme/twentyseventeen.1.1.zip"
   rename: ""
+  remove:
+    - twentyfifteen
+    - twentysixteen
+    - twentyseventeen
+
 
 # PLUGINS
 #################################################################
@@ -103,11 +108,10 @@ plugins_inactive:
 setup:
   wp: true
   settings: true
-  theme: true
+  themes: true
   plugins: true
   cleanup: true
-  # adjust what data you want to be deleted within the cleanup (required `cleanup: true`)
+  # adjust what data you want to be deleted within the cleanup (requires `cleanup: true`)
   comment: true
   posts: true
   files: true
-  themes: true

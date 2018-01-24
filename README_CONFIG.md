@@ -7,7 +7,7 @@ The configuration file is split into five sections:
 
 * Installation
 * Wordpress
-* Theme
+* Themes
 * Plugins
 * WPDistillery Setup
 
@@ -76,20 +76,22 @@ wpsettings:
   convert_smilies: false
 ```
 
-## Theme
-Now you can install a (starter-) theme if you want. Simply add the name and download-url of the theme. WP Distillery will then download, unzip and install the theme. If you do not leave **`rename`** empty, it will also rename the installed theme folder. If you're installing a theme from a git repository, make sure to add the branch in **`source_branch`** or leave it empty if not.
+## Themes
+Now you can install a (starter-) theme if you want. Simply add the name and download-url of the theme. WP Distillery will then download, unzip and install the theme. If you do not leave **`rename`** empty, it will also rename the installed theme folder. By default, WPDistillery will also delete the delete the default WordPress themes defined at **`remove`**. If you don't want this, just leave it empty: `remove: ""`.
 
 ```yaml
-# THEME
+# THEMES
 #################################################################
 
-# theme to install, choose new name in 'rename' or leave empty
-theme:
+# install a custom theme via url, rename it and remove default themes
+themes:
   name: WPSeed
-  rename: ""
   url: "https://github.com/flurinduerst/WPSeed/archive/master.zip"
-  # add branch (e.g. "master") or leave empty ("") if theme is not downloaded from a git repository
-  source_branch: "master"
+  rename: ""
+  remove:
+    - twentyfifteen
+    - twentysixteen
+    - twentyseventeen
 ```
 
 ## Plugins
@@ -138,13 +140,12 @@ Maybe you don't want WP Distillery to install a theme? Or you prefer keeping the
 
 * **`wp`**: install WordPress core
 * **`settings`**: set custom WordPress settings (Note: the value defined **`timezone`** is also considered a setting)
-* **`theme`**: install and activate the theme defined above
+* **`themes`**: install and activate the theme defined above and delete defined default themes
 * **`plugins`**: install the plugins listed
 * **`cleanup`**: delete WordPress defaults as followed
   * **`comment`**: the default comment
   * **`posts`**: the default post
   * **`files`**: `readme.html`, `license.txt`
-  * **`themes`**: the twentyfourteen, twentyfifteen and twentysixteen theme.
 
 
 ```yaml
@@ -155,11 +156,10 @@ Maybe you don't want WP Distillery to install a theme? Or you prefer keeping the
 setup:
   wp: true
   settings: true
-  theme: true
+  themes: true
   plugins: true
   cleanup: true
     comment: true
     posts: true
     files: true
-    themes: true
 ```

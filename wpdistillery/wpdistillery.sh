@@ -5,7 +5,7 @@
 # Author: Flurin Dürst
 # URL: https://wpdistillery.org
 #
-# File version 1.7.2
+# File version 1.8.0
 
 # ERROR Handler
 # ask user to continue on error
@@ -116,20 +116,35 @@ else
   printf "${BLU}>>> skipping settings...${NC}\n"
 fi
 
-# INSTALL THEME
-if $CONF_setup_theme ; then
-  printf "${BRN}[=== INSTALL $CONF_theme_name ===]${NC}\n"
-  printf "${BLU}»»» downloading $CONF_theme_name...${NC}\n"
-  wp theme install $CONF_theme_url
-  printf "${BLU}»»» installing/activating $CONF_theme_name...${NC}\n"
-  if [ ! -z "$CONF_theme_rename" ]; then
+# INSTALL/REMOVE THEMES
+if $CONF_setup_themes ; then
+  printf "${BRN}[=== CONFIGURE THEMES ===]${NC}\n"
+  printf "${BLU}»»» downloading $CONF_themes_name...${NC}\n"
+  wp theme install $CONF_themes_url --force
+  printf "${BLU}»»» installing/activating $CONF_themes_name...${NC}\n"
+  if [ ! -z "$CONF_themes_rename" ]; then
     # rename theme
-    printf "${BLU}»»» renaming $CONF_theme_name to $CONF_theme_rename...${NC}\n"
-    mv wp-content/themes/$CONF_theme_name wp-content/themes/$CONF_theme_rename
-    wp theme activate $CONF_theme_rename
+    printf "${BLU}»»» renaming $CONF_themes_name to $CONF_themes_rename...${NC}\n"
+    mv wp-content/themes/$CONF_themes_name wp-content/themes/$CONF_themes_rename
+    wp theme activate $CONF_themes_rename
   else
-    wp theme activate $CONF_theme_name
+    wp theme activate $CONF_themes_name
   fi
+  if [ ! -z "$CONF_themes_remove" ]; then
+    printf "${BLU}»»» removing default themes...${NC}\n"
+    # loop trough themes that shall be removed
+    for loopedtheme in "${CONF_themes_remove[@]}"
+    do :
+      #make sure the theme to delete is not the chosen one
+      if [ $loopedtheme != $CONF_themes_name ]; then
+        printf "${BLU}» removing $loopedtheme...${NC}\n"
+        wp theme delete $loopedtheme
+
+      fi
+    done
+    # end loop
+  fi
+
 else
   printf "${BLU}>>> skipping theme installation...${NC}\n"
 fi
@@ -152,12 +167,6 @@ if $CONF_setup_cleanup ; then
     if [ -f license.txt ];    then rm license.txt;    fi
     # delete german files
     if [ -f liesmich.html ];  then rm liesmich.html;  fi
-  fi
-  if $CONF_setup_cleanup_themes ; then
-    printf "${BLU}»»» removing default themes...${NC}\n"
-    wp theme delete twentyfifteen
-    wp theme delete twentysixteen
-    wp theme delete twentyseventeen
   fi
 else
   printf "${BLU}>>> skipping Cleanup...${NC}\n"

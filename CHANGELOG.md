@@ -1,7 +1,9 @@
 
 # CHANGELOG
 
-## HEAD | 2.2.2 | 23.01.2018
+## HEAD | 2.3.0 | 24.01.2018
+* re-organize the theme-cleanup (now located at `themes`, removed from `cleanup`)
+* fix a bug caused by using a default theme with theme-cleanup activated
 * silence curl command for downloading the current version of WP CLI to reduce cli-bloating
 * change default local-domain to `.vm` (for "virtual machine") as `.local` has conflicts when using browsersync
 * add note about the WP-Multisite feature to the readme. Thanks to @pjohanneson

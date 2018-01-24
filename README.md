@@ -1,6 +1,6 @@
 ![Screenshot](http://files.flurinduerst.ch/wpdistillery/wpdistillery_logo.png)
 
-**Version 2.2.2** (24.01.2017)
+**Version 2.3.0** (24.01.2017)
 
 Since V2.1.0 WPDistillery is fully compatible with Scotch Box 3.0
 
@@ -14,8 +14,9 @@ One simple command will:
 - download/install/configure WordPress
 - set WordPress options
 - install/activate your favorite WordPress theme (default [WPSeed](https://wpseed.org)).
+- remove default themes
 - install/activate the plugins you defined in the config
-- clean WordPress defaults (contents, plugins, themes, unused files)
+- clean WordPress defaults (contents, plugins, unused files)
 
 You're able to adjust which of the above tasks will be executed. Simply set the desired tasks to true/false in the "Setup Options" section at the bottom of  `config.yml`
 
