@@ -63,8 +63,8 @@ wpsettings:
 
 # install a custom theme via url, rename it and remove default themes
 themes:
-  name: twentyseventeen
-  url: "https://downloads.wordpress.org/theme/twentyseventeen.1.1.zip"
+  name: WPSeed
+  url: "https://github.com/flurinduerst/WPSeed/archive/master.zip"
   rename: ""
   remove:
     - twentyfifteen
