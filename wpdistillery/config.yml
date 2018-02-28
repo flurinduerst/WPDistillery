@@ -6,14 +6,11 @@
 # For detailed instructions on this file read the config.yml-documentation at
 # https://wpdistillery.org/documentation/config-yml-documentation/
 #
-# File Version: 1.8.0
+# File Version: 1.8.1
 
 
 # INSTALLATION
 #################################################################
-
-# WordPress folder
-wpfolder: public
 
 # WordPress version
 wpversion: latest

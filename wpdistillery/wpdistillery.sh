@@ -5,7 +5,7 @@
 # Author: Flurin Dürst
 # URL: https://wpdistillery.org
 #
-# File version 1.8.0
+# File version 1.8.1
 
 # ERROR Handler
 # ask user to continue on error
@@ -63,13 +63,8 @@ cd ..
 # READ CONFIG
 eval $(parse_yaml wpdistillery/config.yml "CONF_")
 
-# CHECK WP FOLDER
-if [ ! -d "$CONF_wpfolder" ]; then
-  mkdir $CONF_wpfolder
-  printf "${BLU}»»» creating WP Folder $CONF_wpfolder...${NC}\n"
-fi
-
-cd $CONF_wpfolder
+# navigate to root dir
+cd public
 
 # INSTALL WORDPRESS
 if $CONF_setup_wp ; then

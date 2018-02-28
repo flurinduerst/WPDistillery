@@ -1,7 +1,10 @@
 
 # CHANGELOG
 
-## HEAD | 2.3.0 | 24.01.2018
+## HEAD | 2.3.1 | 28.02.2018
+* remove custom root dir because path to the docroot is in the Apache config using `public` (thanks to @XedinUnknown)
+
+## 2.3.0 | 24.01.2018
 * re-organize the theme-cleanup (now located at `themes`, removed from `cleanup`)
 * fix a bug caused by using a default theme with theme-cleanup activated
 * silence curl command for downloading the current version of WP CLI to reduce cli-bloating
