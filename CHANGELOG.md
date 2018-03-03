@@ -1,7 +1,8 @@
 
 # CHANGELOG
 
-## HEAD | 2.3.1 | 28.02.2018
+## HEAD | 2.3.2 | 03.03.2018
+* fix a bug where the `public` dir was not created on setup (thanks to @donaldCull)
 * remove custom root dir because path to the docroot is in the Apache config using `public` (thanks to @XedinUnknown)
 
 ## 2.3.0 | 24.01.2018
@@ -9,12 +10,12 @@
 * fix a bug caused by using a default theme with theme-cleanup activated
 * silence curl command for downloading the current version of WP CLI to reduce cli-bloating
 * change default local-domain to `.vm` (for "virtual machine") as `.local` has conflicts when using browsersync
-* add note about the WP-Multisite feature to the readme. Thanks to @pjohanneson
+* add note about the WP-Multisite feature to the readme (thanks to @pjohanneson)
 
 ## 2.2.0 | 31.10.2017
 * change default local-domain to `.local` as `.dev` is an official gTLD now
 * add ssh credentials to `Vagrantfile`
-* add `--hard` to rewrite flush to make sure .htaccess file is generated (Thanks to @XedinUnknown)
+* add `--hard` to rewrite flush to make sure .htaccess file is generated (thanks to @XedinUnknown)
 * Fix Typo
 
 ## 2.1.0 | 21.06.2017

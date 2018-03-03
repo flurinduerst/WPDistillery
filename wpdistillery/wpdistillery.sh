@@ -5,7 +5,7 @@
 # Author: Flurin Dürst
 # URL: https://wpdistillery.org
 #
-# File version 1.8.1
+# File version 1.8.2
 
 # ERROR Handler
 # ask user to continue on error
@@ -62,6 +62,13 @@ cd ..
 
 # READ CONFIG
 eval $(parse_yaml wpdistillery/config.yml "CONF_")
+
+
+# CHECK FOR ROOT-DIR
+if [ ! -d "public" ]; then
+  printf "${BLU}»»» creating root dir \"public\"...${NC}\n"
+  mkdir public
+fi
 
 # navigate to root dir
 cd public
