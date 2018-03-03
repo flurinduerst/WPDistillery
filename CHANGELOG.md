@@ -1,7 +1,8 @@
 
 # CHANGELOG
 
-## HEAD | 2.3.2 | 03.03.2018
+## HEAD | 2.3.3 | 03.03.2018
+* update default plugin list
 * fix a bug where the `public` dir was not created on setup (thanks to @donaldCull)
 * remove custom root dir because path to the docroot is in the Apache config using `public` (thanks to @XedinUnknown)
 

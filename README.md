@@ -1,6 +1,6 @@
 ![Screenshot](http://files.flurinduerst.ch/wpdistillery/wpdistillery_logo.png)
 
-**Version 2.3.2** (03.03.2018)
+**Version 2.3.3** (03.03.2018)
 
 Since V2.1.0 WPDistillery is fully compatible with Scotch Box 3.0
 

@@ -6,7 +6,7 @@
 # For detailed instructions on this file read the config.yml-documentation at
 # https://wpdistillery.org/documentation/config-yml-documentation/
 #
-# File Version: 1.8.1
+# File Version: 1.8.2
 
 
 # INSTALLATION
@@ -85,17 +85,10 @@ plugins_active:
 # plugins to install
 plugins_inactive:
   #development
-  - custom-post-type-ui
   - search-and-replace
-  - capability-manager-enhanced
-  #administration
-  - adminimize
-  - admin-menu-editor
-  - admin-menu-reorder
   # seo
   - autodescription
   #security/backup
-  - wp-security-audit-log
   - backwpup
 
 # WPDISTILLERY SETUP
