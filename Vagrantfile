@@ -12,8 +12,23 @@ Vagrant.configure("2") do |config|
     config.vm.box = "scotch/box"
     config.vm.network "private_network", ip: "192.168.33.10"
     config.vm.hostname = "wpdistillery.vm"
-    config.vm.synced_folder ".", "/var/www", :mount_options => ["dmode=777", "fmode=666"]
-
+    
+    # Use vagrant-winnfsd if available https://github.com/flurinduerst/WPDistillery/issues/78
+    if Vagrant.has_plugin? 'vagrant-winnfsd' 
+      config.vm.synced_folder ".", "/var/www",
+        nfs: true,
+        mount_options: [
+        'nfsvers=3',
+        'vers=3',
+        'actimeo=1',
+        'rsize=8192',
+        'wsize=8192',
+        'timeo=14'
+        ]
+    else
+      config.vm.synced_folder ".", "/var/www", :mount_options => ["dmode=777", "fmode=666"]
+    end
+    
     # WPDistillery Windows Support
     if Vagrant::Util::Platform.windows?
       config.vm.provision "shell",
