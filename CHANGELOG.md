@@ -1,7 +1,8 @@
 
 # CHANGELOG
 
-## HEAD | 2.3.3 | 03.03.2018
+## HEAD | 2.3.4 | 07.06.2018
+* add WinNFSd support (thanks to @thursby)
 * fix license-link in documentation (thanks to @mikaeljorhult)
 * update default plugin list
 * fix a bug where the `public` dir was not created on setup (thanks to @donaldCull)
