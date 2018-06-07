@@ -2,23 +2,23 @@
 # CHANGELOG
 
 ## HEAD | 2.3.4 | 07.06.2018
-* add WinNFSd support (thanks to @thursby)
-* fix license-link in documentation (thanks to @mikaeljorhult)
+* add WinNFSd support (thanks to [@thursby](https://github.com/thursby))
+* fix license-link in documentation (thanks to [@mikaeljorhult](https://github.com/mikaeljorhult))
 * update default plugin list
-* fix a bug where the `public` dir was not created on setup (thanks to @donaldCull)
-* remove custom root dir because path to the docroot is in the Apache config using `public` (thanks to @XedinUnknown)
+* fix a bug where the `public` dir was not created on setup (thanks to [@donaldCull](https://github.com/donaldCull))
+* remove custom root dir because path to the docroot is in the Apache config using `public` (thanks to [@XedinUnknown](https://github.com/XedinUnknown))
 
 ## 2.3.0 | 24.01.2018
 * re-organize the theme-cleanup (now located at `themes`, removed from `cleanup`)
 * fix a bug caused by using a default theme with theme-cleanup activated
 * silence curl command for downloading the current version of WP CLI to reduce cli-bloating
 * change default local-domain to `.vm` (for "virtual machine") as `.local` has conflicts when using browsersync
-* add note about the WP-Multisite feature to the readme (thanks to @pjohanneson)
+* add note about the WP-Multisite feature to the readme (thanks to [@pjohanneson](https://github.com/pjohanneson))
 
 ## 2.2.0 | 31.10.2017
 * change default local-domain to `.local` as `.dev` is an official gTLD now
 * add ssh credentials to `Vagrantfile`
-* add `--hard` to rewrite flush to make sure .htaccess file is generated (thanks to @XedinUnknown)
+* add `--hard` to rewrite flush to make sure .htaccess file is generated (thanks to [@XedinUnknown](https://github.com/XedinUnknown))
 * Fix Typo
 
 ## 2.1.0 | 21.06.2017
@@ -26,7 +26,7 @@
 * update default plugin list: remove yoast, add the-seo-framework (see https://roots.io/weve-migrated-from-yoast-seo/)
 * remove max-filesize option on provisioning
 * add license note
-* fix yaml syntax errors (thanks to @XedinUnknown)
+* fix yaml syntax errors (thanks to [@XedinUnknown](https://github.com/XedinUnknown))
 * fix front_page_name variable in setup
 
 ## 2.0.0 | 15.01.2017
@@ -52,7 +52,7 @@ Contributors: [@FlurinDuerst](https://github.com/flurinduerst), [@ShaneShipston]
 * removed google-sitemap-generator from default plugins (Yoast covers this aswell)
 * added note about wpdistillery.org
 
-Contributors: @flurinduerst, @ShaneShipston, @drawcard
+Contributors: [@flurinduerst](https://github.com/flurinduerst), [@ShaneShipston](https://github.com/ShaneShipston), [@drawcard](https://github.com/drawcard)
 
 ## 1.7.1 | 02.08.2016
 * fixed a bug that caused an error if a theme was installed that doesn't end with `master.zip`
