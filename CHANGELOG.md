@@ -2,6 +2,7 @@
 # CHANGELOG
 
 ## HEAD | 2.3.3 | 03.03.2018
+* fix license-link in documentation (thanks to @mikaeljorhult)
 * update default plugin list
 * fix a bug where the `public` dir was not created on setup (thanks to @donaldCull)
 * remove custom root dir because path to the docroot is in the Apache config using `public` (thanks to @XedinUnknown)
@@ -26,7 +27,6 @@
 * add license note
 * fix yaml syntax errors (thanks to @XedinUnknown)
 * fix front_page_name variable in setup
-
 
 ## 2.0.0 | 15.01.2017
 * simplified setup process to `vagrant up`

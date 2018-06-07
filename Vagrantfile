@@ -2,6 +2,7 @@
 # vi: set ft=ruby :
 #
 # WPDistillery Vagrantfile using Scotch Box
+# Check out https://box.scotch.io to learn more about Scotch Box
 #
 # File Version: 1.2.0
 

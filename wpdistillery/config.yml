@@ -58,8 +58,8 @@ wpsettings:
 # THEMES
 #################################################################
 
-# install a custom theme via url, rename it and remove default themes
-themes:
+# install a custom theme via url, rename it and remove the default themes
+theme:
   name: WPSeed
   url: "https://github.com/flurinduerst/WPSeed/archive/master.zip"
   rename: ""
