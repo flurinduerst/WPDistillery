@@ -77,6 +77,7 @@ Something went wrong within the WPDistillery setup. I'd like to restart the setu
 * Contributors:
   * [@ShaneShipston](https://github.com/ShaneShipston)
   * [@drawcard](https://github.com/drawcard)
+  * [@thursby](https://github.com/thursby)
 
 ### Contribution
 * Fork it
