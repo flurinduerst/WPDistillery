@@ -1,7 +1,8 @@
 
 # CHANGELOG
 
-## HEAD | 2.3.4 | 07.06.2018
+## HEAD | 2.3.5 | 11.06.2018
+* fix a bug regarding the Themes mapping name in the provisioning (thanks to [@bzmr](https://github.com/bzmr))
 * add WinNFSd support (thanks to [@thursby](https://github.com/thursby))
 * fix license-link in documentation (thanks to [@mikaeljorhult](https://github.com/mikaeljorhult))
 * update default plugin list
