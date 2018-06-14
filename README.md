@@ -42,7 +42,7 @@ To setup a new project running Scotch Box and WordPress, simply follow these ste
 
 Done! You can now access your project at the local URL (for example `yoursite.vm`) defined in step 3. (or at http://192.168.33.10/)
 
-Note: Windows users may wish to `vagrant install plugin vagrant-winnfsd` before `vagrant up` for a moderate speed increase on sites with a lot of files. WPDistillery will detect WinNFSd support if needed. See [Vagrant WinNFSd](https://github.com/winnfsd/vagrant-winnfsd).
+Note: Windows users may wish to `vagrant plugin install vagrant-winnfsd` before `vagrant up` for a moderate speed increase on sites with a lot of files. WPDistillery will detect WinNFSd support if needed. See [Vagrant WinNFSd](https://github.com/winnfsd/vagrant-winnfsd).
 
 
 ## Additional Information
