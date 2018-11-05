@@ -20,6 +20,9 @@ function continue_error {
 }
 trap 'continue_error' ERR
 
+# WP-CLI environment variable
+export WP_CLI_CACHE_DIR=/home/vagrant/.wp-cli/cache
+
 # REQUIREMENTS
 ####################################################################################################
 
