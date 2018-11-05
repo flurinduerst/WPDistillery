@@ -2,7 +2,7 @@
 
 ![WPDistillery Logo](http://files.flurinduerst.ch/wpdistillery/wpdistillery_logo.png)
 
-Version 2.3.5 (11.06.2018)
+Version 2.3.6 (05.11.2018)
 
 Created by [wpdistillery.org](https://wpdistillery.org)
 
@@ -16,7 +16,7 @@ One simple command will:
 - Install and update requirements on the local webserver
 - Download, install, and configure WordPress
 - Set WordPress options
-- Install and activate your favorite WordPress theme
+- Install and activate your favorite WordPress theme (default: [WPSeed](https://wpseed.org))
 - Remove default themes
 - Install and activate the plugins defined in the config files
 - Clean the contents, plugins, unused files, and other Wordpress defaults
@@ -90,12 +90,13 @@ Something went wrong within the WPDistillery setup. I'd like to restart the setu
 
 ## About
 
-- Author: [Flurin Dürst](https://github.com/flurinduerst) 
-  - [Twitter](https://twitter.com/flurinduerst)
+- Author: [Flurin Dürst](https://github.com/flurinduerst) | [Twitter](https://twitter.com/flurinduerst)
 - Contributors:
   - [@ShaneShipston](https://github.com/ShaneShipston)
   - [@drawcard](https://github.com/drawcard)
   - [@thursby](https://github.com/thursby)
+  - [@tgroff](https://github.com/tgroff)
+  - [@mohnjatthews](https://github.com/mohnjatthews)
 
 ### Contribute
 

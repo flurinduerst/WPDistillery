@@ -1,13 +1,19 @@
 
 # CHANGELOG
 
-## HEAD | 2.3.5 | 11.06.2018
+## HEAD | 2.3.6 | 05.11.2018
+* Add WP-CLI environment variables to fix permission errors when creating the WPCLI cache folder (thanks to [@tgroff](https://github.com/tgroff))
+* Clean up the readme (thanks to [@mohnjatthews](https://github.com/mohnjatthews)
 * fix a bug regarding the Themes mapping name in the provisioning (thanks to [@bzmr](https://github.com/bzmr))
 * add WinNFSd support (thanks to [@thursby](https://github.com/thursby))
 * fix license-link in documentation (thanks to [@mikaeljorhult](https://github.com/mikaeljorhult))
 * update default plugin list
 * fix a bug where the `public` dir was not created on setup (thanks to [@donaldCull](https://github.com/donaldCull))
 * remove custom root dir because path to the docroot is in the Apache config using `public` (thanks to [@XedinUnknown](https://github.com/XedinUnknown))
+
+Contributors: 
+* [@tgroff](https://github.com/tgroff)
+* [@mohnjatthews](https://github.com/mohnjatthews)
 
 ## 2.3.0 | 24.01.2018
 * re-organize the theme-cleanup (now located at `themes`, removed from `cleanup`)
