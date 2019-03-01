@@ -6,7 +6,7 @@ Version 2.3.6 (05.11.2018)
 
 Created by [wpdistillery.org](https://wpdistillery.org)
 
-I’m putting a lot of time into maintaining WPDistillery. So if you like, please consider supporting it:
+I’m putting a lot of time into maintaining WPDistillery. So if you like it, please consider supporting it:
 
 [![BMC](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/flurinduerst)
 [![Patreon](https://files.flurinduerst.ch/patreon.jpg)](https://www.patreon.com/bePatron?u=10089926)
