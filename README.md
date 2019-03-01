@@ -6,6 +6,11 @@ Version 2.3.6 (05.11.2018)
 
 Created by [wpdistillery.org](https://wpdistillery.org)
 
+I’m putting a lot of time into maintaining WPDistillery. So if you like, please consider supporting it:
+
+[![BMC](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/flurinduerst)
+[![Patreon](https://files.flurinduerst.ch/patreon.jpg)](https://www.patreon.com/bePatron?u=10089926)
+
 ## What is WPDistillery
 
 WP Distillery does all the work for you when setting up a new WordPress project with [Scotch Box](https://box.scotch.io/). Simply add your preferred theme, plugins, and options into `config.yml` and you're good to go! With WPDistillery it won't take longer than 5 minutes until you can start working on your new WordPress project.
@@ -113,5 +118,3 @@ Feel free to contact me if you have questions or need any advice.
 WPDistillery is released under the MIT Public License.
 
 Note: The "About" section in `README.md` and the author (`@author`) notice in the file-headers shall not be edited or deleted without permission. For details, please see [License](LICENSE).
-
-I’m putting a lot of time into maintaining WPDistillery, so please consider [donating](https://www.paypal.me/FlurinDuerst/10) or [sharing](https://twitter.com/intent/tweet?url=https%3A%2F%2Fwpdistillery.org). Thank you!
