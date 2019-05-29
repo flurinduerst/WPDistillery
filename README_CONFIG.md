@@ -91,7 +91,7 @@ themes:
 ```
 
 ## Plugins
-You can select what plugins you want WP Distillery to install for you. Split into two sections you can define which plugins to download and install, and which to also activate. By default this section contains a few recommendations.
+You can select what plugins you want WP Distillery to install for you. Split into two sections you can define which plugins to download and install, and which to also activate. By default this section contains a few recommendations. The plugin identifier must be the same as it's slug on the WordPress plugin catalog (ex: disable-comments = https://wordpress.org/plugins/disable-comments/)
 
 ```yaml
 # PLUGINS
