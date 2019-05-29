@@ -56,6 +56,13 @@ To setup a new project running Scotch Box and WordPress, simply follow these ste
 
 Done! You can now access your project at the local URL (for example `yoursite.vm`) defined in **Step 3**. (or at http://192.168.33.10/)
 
+**Note:** Currently there's an [issue](https://github.com/scotch-io/scotch-box/issues/296) related to [ScotchBox](https://github.com/scotch-io/scotch-box) that hinders Vagrant from mounting VirtualBox Shared folders. The solution is to install [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest) before running vagrant. This will install the correct vbguest package into the box:
+
+```
+vagrant plugin install vagrant-vbguest
+vagrant vbguest
+```
+
 ### Windows Users
 
 Windows users may wish to `vagrant plugin install vagrant-winnfsd` before `vagrant up` for a moderate speed increase on sites with a lot of files. WPDistillery will detect **WinNFSd** support if needed. See [Vagrant WinNFSd](https://github.com/winnfsd/vagrant-winnfsd) for more information.
